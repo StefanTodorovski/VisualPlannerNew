@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HexColorPicker } from 'react-colorful';
 import './homePageKid.css';
 import avatar1 from "../../../assets/avatar1.png";
@@ -9,14 +9,28 @@ import avatar5 from "../../../assets/avatar5.png";
 import games from "../../../assets/gamesgif.gif";
 import tasks from "../../../assets/tasks.gif";
 import points from "../../../assets/points.gif";
-
-
+import robotGif from "../../../assets/robot.gif";  // Assuming you have this gif in the assets folder
+import axios from 'axios';
+import robotAudio from "../../../assets/robot.mp3";  // Assuming you have this audio file in the assets folder
+import axiosInstance from '../../../services/axiosInstance';
 
 const HomePageKid = () => {
   const [selectedColor, setSelectedColor] = useState('#ffffff');
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [showAvatarDialog, setShowAvatarDialog] = useState(false);
   const [selectedAvatar, setSelectedAvatar] = useState(avatar1);
+  const [showRobotDialog, setShowRobotDialog] = useState(false);
+  const [userId, setUserId] = useState(null);
+
+  useEffect(() => {
+    const userData = localStorage.getItem("userData");
+    if (userData) {
+      const parsedUserData = JSON.parse(userData);
+      setUserId(parsedUserData.id);
+    } else {
+      console.log("No user data found in localStorage");
+    }
+  }, []);  // Empty dependency array ensures this runs only once after the initial render
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
@@ -33,6 +47,29 @@ const HomePageKid = () => {
   const handleAvatarSelection = (avatarUrl) => {
     setSelectedAvatar(avatarUrl);
     toggleAvatarDialog();
+  };
+
+  const handleGamesClick = async () => {
+    if (userId) {
+      try {
+        const response = await axiosInstance.get(`/users/${userId}/points`);
+        const points = response.data;
+        if (points === 0) {
+          setShowRobotDialog(true);
+          const audio = new Audio(robotAudio);
+          audio.play();
+          setTimeout(() => {
+            setShowRobotDialog(false);
+          }, 6500); 
+        } else {
+          window.location.href = "/games";
+        }
+      } catch (error) {
+        console.error("Error fetching user points:", error);
+      }
+    } else {
+      console.error("User ID not set");
+    }
   };
 
   return (
@@ -68,18 +105,24 @@ const HomePageKid = () => {
       )}
 
       <div className="middle-columns">
-        <div className="side-column">
+        <div className="side-column" onClick={handleGamesClick}>
           <img src={games} alt="Games" className="side-gif" />
         </div>
         <div className="side-column">
           <img src={tasks} alt="Tasks" className="side-gif" />
         </div>
         <div className="side-column">
-          <img src={points} alt="Tasks" className="side-gif" />
+          <img src={points} alt="Points" className="side-gif" />
         </div>
       </div>
+
+      {showRobotDialog && (
+        <div className="robot-dialog">
+          <img src={robotGif} alt="Robot" />
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default HomePageKid;

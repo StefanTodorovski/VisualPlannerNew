@@ -96,4 +96,11 @@ public class UserController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/{id}/points")
+    public ResponseEntity<Integer> getPointsByUserId(@PathVariable Long id) {
+        return userService.findById(id)
+                .map(user -> ResponseEntity.ok().body(user.getPoints()))
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
 }

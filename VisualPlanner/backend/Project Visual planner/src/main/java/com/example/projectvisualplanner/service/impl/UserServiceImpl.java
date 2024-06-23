@@ -84,6 +84,7 @@ public class UserServiceImpl implements UserService {
         user.setPicture(userRequest.picture);
         user.setPetDescription(userRequest.petDescription);
         user.setRoleId(1);
+        user.setPoints(0);
 
         return this.userRepository.save(user);
     }

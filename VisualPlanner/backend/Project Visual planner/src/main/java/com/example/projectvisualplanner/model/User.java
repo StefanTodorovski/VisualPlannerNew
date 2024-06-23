@@ -43,10 +43,13 @@ public class User {
     @Column(name = "role_id")
     private int roleId;
 
+    @Column(name = "points")
+    private int points;
+
     public User() {
     }
 
-    public User(Long id, String name, String surname, String email, String password, String phone, String location, String bio, byte[] picture, String petDescription, int roleId) {
+    public User(Long id, String name, String surname, String email, String password, String phone, String location, String bio, byte[] picture, String petDescription, int roleId, int points) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -58,5 +61,6 @@ public class User {
         this.picture = picture;
         this.petDescription = petDescription;
         this.roleId = roleId;
+        this.points = points;
     }
 }
