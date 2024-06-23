@@ -1,85 +1,118 @@
 .homepage-container {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.avatar-container {
+  position: relative;
+  margin-top: 10px; /* Adjust margin as needed */
+  cursor: pointer;
+}
+
+.avatar-image {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  border-radius: 50%;
+}
+
+.avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  border-radius: 50%;
+  display: none; /* Initially hidden */
+}
+
+.avatar-container:hover .avatar-overlay {
+  display: block; /* Show overlay on hover */
+}
+
+.avatar-dialog {
+  position: absolute;
+  top: 20%; /* Adjust position as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  z-index: 1000; /* Ensure dialog is above other content */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 80%; /* Maximum width of the dialog */
+}
+
+.avatar-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensure options wrap on smaller screens */
+  margin-top: 20px;
+}
+
+.avatar-options img {
+  width: 80px; /* Adjust size of avatar images */
+  height: 80px; /* Adjust size of avatar images */
+  margin: 10px;
+  cursor: pointer;
+}
+
+.color-circle {
+  width: 60px; /* Adjust size of color circle */
+  height: 60px; /* Adjust size of color circle */
+  border-radius: 50%;
+  margin-top: 20px;
+  cursor: pointer;
+  border: 3px solid black;
+}
+
+.color-picker-container {
+  position: absolute;
+  top: 20%; /* Adjust position as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  z-index: 1000; /* Ensure color picker is above other content */
+}
+
+.hex-color-picker {
+  width: 100%;
+  height: auto;
+}
+
+.middle-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px; /* Adjust margin as needed */
+}
+
+.side-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.side-gif {
+  max-width: 100px; /* Adjust size as needed */
+  max-height: 100px; /* Adjust size as needed */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .middle-columns {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
   }
-  
-  .avatar-container {
-    position: relative;
-    margin-top: 10px; /* Adjust margin as needed */
-    cursor: pointer;
-  }
-  
-  .avatar-image {
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    border-radius: 50%;
-  }
-  
-  .avatar-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+  .side-column {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    border-radius: 50%;
-    display: none; /* Initially hidden */
-  }
-  
-  .avatar-container:hover .avatar-overlay {
-    display: block; /* Show overlay on hover */
-  }
-  
-  .avatar-dialog {
-    position: absolute;
-    top: 20%; /* Adjust position as needed */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%);
-    z-index: 1000; /* Ensure dialog is above other content */
-    background-color: #fff;
+    margin-bottom: 20px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-width: 80%; /* Maximum width of the dialog */
   }
-  
-  .avatar-options {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Ensure options wrap on smaller screens */
-    margin-top: 20px;
-  }
-  
-  .avatar-options img {
-    width: 80px; /* Adjust size of avatar images */
-    height: 80px; /* Adjust size of avatar images */
-    margin: 10px;
-    cursor: pointer;
-  }
-  
-  .color-circle {
-    width: 60px; /* Adjust size of color circle */
-    height: 60px; /* Adjust size of color circle */
-    border-radius: 50%;
-    margin-top: 20px;
-    cursor: pointer;
-    border: 3px solid black;
-  }
-  
-  .color-picker-container {
-    position: absolute;
-    top: 20%; /* Adjust position as needed */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%);
-    z-index: 1000; /* Ensure color picker is above other content */
-  }
-  
-  .hex-color-picker {
-    width: 100%;
-    height: auto;
-  }
-  
+}
