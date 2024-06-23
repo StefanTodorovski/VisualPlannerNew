@@ -1,0 +1,148 @@
+/* App.css */
+
+.App {
+  display: flex;
+  max-width: 800px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.filters {
+  margin-right: 20px;
+  margin-left: -80px;
+  flex: 0 0 auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 200px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.filters h3 {
+  margin-bottom: 10px;
+  font-weight: normal;
+  color: #555;
+}
+
+.filters p {
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  color: #555;
+}
+
+.filters p.active {
+  background-color: #8ccc88;
+  color: white;
+}
+
+.card-services {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  width: 800px;
+  margin-left: 50px;
+}
+
+.card-services-none {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-left: 25px;
+}
+
+.card-service {
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-service:last-child {
+  margin-right: 0;
+}
+
+.services-pagination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #8ccc88;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination button.active {
+  background-color: #5e8d5e;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card-service img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-details {
+  padding: 10px;
+}
+
+.posted-by {
+  font-weight: bold;
+}
+
+.card-details h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #8ccc88;
+}
+
+.card-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.add-service-link {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-service-button {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-service-button:hover {
+  background-color: #0056b3;
+}

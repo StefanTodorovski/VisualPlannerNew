@@ -1,0 +1,93 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: #A8E1A0;
+    border-radius: 0 0 4vw 4vw;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.contact-title {
+    font-family: "Fira Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #967BB6;
+}
+
+.contact-message {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #350A56;
+}
+
+.contact-form-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #967BB6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    z-index: 0;
+}
+
+.contact-form-container {
+    position: relative;
+    background: #FFFFFF;
+    width: 90%;
+    height: 500px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+
+.form-row {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.first-col,
+.second-col {
+    width: 48%;
+    height: 100%;
+    background: #8E6CB6;
+    border-radius: 15px;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.second-col {
+    background: none;
+}
+
+.icon-row {
+    display: flex;
+    padding: 25px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.icon-column {
+    margin-right: 10px;
+}
+
+.white-icon {
+    padding-left: 32px;
+    color: white;
+}

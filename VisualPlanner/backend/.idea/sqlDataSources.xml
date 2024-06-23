@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="bb82b443-9474-4f9f-aa7c-c85505614c73" name="furry_footsteps_db@database Mapping">
+      <data-sources db="d66bd9b4-1bce-4414-862a-eef3e68add7f" ddl="ef88d575-bf9d-4c5f-9d0d-8d07a48f550f" />
+    </mapping>
+  </component>
+</project>

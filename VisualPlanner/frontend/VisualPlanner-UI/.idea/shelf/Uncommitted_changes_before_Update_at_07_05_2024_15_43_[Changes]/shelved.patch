@@ -1,0 +1,113 @@
+Index: src/views/AboutPage.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport { Container, Row, Col } from 'react-bootstrap';\r\nimport HeaderSmall from '../components/headerSmall/HeaderSmall';\r\n// import Navbar from '../components/navigation/NavBar';\r\nimport './AboutPage.css'; // Make sure to create this CSS file and use the code below\r\nimport WomanHuggingDog from '../assets/woman-hugging-dog.png';\r\nimport Rectangle1 from '../assets/Rectangle1.png';\r\nimport Rectangle2 from '../assets/Rectangle2.png'\r\nimport Rectangle3 from '../assets/Rectangle3.png';\r\nimport Rectangle4 from '../assets/Rectangle4.png';\r\nimport Rectangle5 from '../assets/Rectangle5.png';\r\nimport Rectangle6 from '../assets/Rectangle6.png';\r\nimport Rectangle7 from '../assets/Rectangle7.png';\r\nimport RectangleNav from \"../assets/rectangle-nav.png\";\r\n\r\n\r\n// const AboutPage = () => {\r\n//     return (\r\n//         <div>\r\n//             <Navbar />\r\n//             <div className=\"about-page\">\r\n//                 <Container>\r\n//                     <Row className=\"about-elements\">\r\n//                         {/* Column for the text content */}\r\n//                         <Col md={6}>\r\n//                             <h1 className=\"title\">Welcome To Furry Footsteps!</h1>\r\n//                             <p className=\"description\">\r\n//                                 We're your one-stop destination for premium pet care services. From grooming and training to daycare and boarding, we offer everything your furry friend needs to thrive. Our experienced team provides personalized care tailored to your pet's unique needs, ensuring they feel safe and loved every step of the way. Join the Furry Footsteps family today and give your pet the exceptional care they deserve.\r\n//                             </p>\r\n//                         </Col>\r\n//\r\n//                         {/* Column for the image and decorative shapes */}\r\n//                         <Col md={6} className=\"about-container\">\r\n//                             {/* All the rectangle images */}\r\n//                             <img src={Rectangle1} className=\"rectangle rectangle-1\" alt=\"Decorative Shape\" />\r\n//                             {/* ...other rectangles... */}\r\n//                             {/* The woman and dog image */}\r\n//                             <div className=\"woman-hugging-dog\">\r\n//                                 <img src={WomanHuggingDog} alt=\"Woman hugging dog\" />\r\n//                             </div>\r\n//                         </Col>\r\n//                     </Row>\r\n//                 </Container>\r\n//             </div>\r\n//         </div>\r\n//     );\r\n// };\r\n//\r\n// export default AboutPage;\r\n\r\nconst AboutPage = () => {\r\n    return (\r\n        <div>\r\n            {/*<Navbar />*/}\r\n            <div className=\"rectangle-4\">\r\n                <img src={Rectangle4} alt=\"Decorative Shape\" />\r\n            </div>\r\n            <HeaderSmall />\r\n            <div className=\"about-page\">\r\n                <Container>\r\n                    <Row className=\"about-elements\">\r\n                        <Col md={6}>\r\n                            <h1 className=\"title\">Welcome To Furry Footsteps!</h1>\r\n                            <p className=\"description\">\r\n                                We're your one-stop destination for premium pet care services. From grooming and training to daycare and boarding, we offer everything your furry friend needs to thrive. Our experienced team provides personalized care tailored to your pet's unique needs, ensuring they feel safe and loved every step of the way. Join the Furry Footsteps family today and give your pet the exceptional care they deserve.\r\n                            </p>\r\n                            <div className=\"rectangle-3\">\r\n                                <img src={Rectangle3} alt=\"Decorative Shape\" />\r\n                            </div>\r\n                        </Col>\r\n                        <Col md={6}>\r\n                            <div className=\"about-container\">\r\n                                <img src={Rectangle5} className=\"rectangle rectangle-5\" alt=\"Decorative Shape\" />\r\n                                <img src={Rectangle6} className=\"rectangle rectangle-6\" alt=\"Decorative Shape\" />\r\n                                <img src={Rectangle7} className=\"rectangle rectangle-7\" alt=\"Decorative Shape\" />\r\n                                <img src={Rectangle1} className=\"rectangle rectangle-1\" alt=\"Decorative Shape\" />\r\n                                <img src={Rectangle2} className=\"rectangle rectangle-2\" alt=\"Decorative Shape\" />\r\n                            </div>\r\n                            <div className=\"woman-hugging-dog\">\r\n                                <img src={WomanHuggingDog}  alt=\"Woman hugging dog\" />\r\n                            </div>\r\n                        </Col>\r\n                    </Row>\r\n                </Container>\r\n            </div>\r\n        </div>\r\n    );\r\n}\r\n\r\nexport default AboutPage;
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/views/AboutPage.js b/src/views/AboutPage.js
+--- a/src/views/AboutPage.js	(revision 7d2d9e79012798e8e048bbbdbf71891974ed8ced)
++++ b/src/views/AboutPage.js	(date 1714229008319)
+@@ -13,41 +13,6 @@
+ import Rectangle7 from '../assets/Rectangle7.png';
+ import RectangleNav from "../assets/rectangle-nav.png";
+ 
+-
+-// const AboutPage = () => {
+-//     return (
+-//         <div>
+-//             <Navbar />
+-//             <div className="about-page">
+-//                 <Container>
+-//                     <Row className="about-elements">
+-//                         {/* Column for the text content */}
+-//                         <Col md={6}>
+-//                             <h1 className="title">Welcome To Furry Footsteps!</h1>
+-//                             <p className="description">
+-//                                 We're your one-stop destination for premium pet care services. From grooming and training to daycare and boarding, we offer everything your furry friend needs to thrive. Our experienced team provides personalized care tailored to your pet's unique needs, ensuring they feel safe and loved every step of the way. Join the Furry Footsteps family today and give your pet the exceptional care they deserve.
+-//                             </p>
+-//                         </Col>
+-//
+-//                         {/* Column for the image and decorative shapes */}
+-//                         <Col md={6} className="about-container">
+-//                             {/* All the rectangle images */}
+-//                             <img src={Rectangle1} className="rectangle rectangle-1" alt="Decorative Shape" />
+-//                             {/* ...other rectangles... */}
+-//                             {/* The woman and dog image */}
+-//                             <div className="woman-hugging-dog">
+-//                                 <img src={WomanHuggingDog} alt="Woman hugging dog" />
+-//                             </div>
+-//                         </Col>
+-//                     </Row>
+-//                 </Container>
+-//             </div>
+-//         </div>
+-//     );
+-// };
+-//
+-// export default AboutPage;
+-
+ const AboutPage = () => {
+     return (
+         <div>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"03a4626e-e2fa-4f45-b412-cf4df3550c0e\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/headerSmall/HeaderSmall.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/headerSmall/HeaderSmall.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/headerSmall/HeaderSmall.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/headerSmall/HeaderSmall.js\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaScript File\" />\r\n        <option value=\"CSS File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2ebEeUjquUnOGxmclpyr2ctuaVY\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Stefan Todorovski\\OneDrive\\Desktop\\VisualPlanner-UI\\src\\components\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"03a4626e-e2fa-4f45-b412-cf4df3550c0e\" name=\"Changes\" comment=\"\" />\r\n      <created>1712164984933</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1712164984933</updated>\r\n      <workItem from=\"1712164987948\" duration=\"1595000\" />\r\n      <workItem from=\"1712437233403\" duration=\"664000\" />\r\n      <workItem from=\"1712486232328\" duration=\"6883000\" />\r\n      <workItem from=\"1712505041235\" duration=\"24000\" />\r\n      <workItem from=\"1712917351092\" duration=\"5711000\" />\r\n      <workItem from=\"1713993994131\" duration=\"3977000\" />\r\n      <workItem from=\"1714141927226\" duration=\"1716000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7d2d9e79012798e8e048bbbdbf71891974ed8ced)
++++ b/.idea/workspace.xml	(date 1714229083944)
+@@ -1,10 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="03a4626e-e2fa-4f45-b412-cf4df3550c0e" name="Changes" comment="">
++    <list default="true" id="03a4626e-e2fa-4f45-b412-cf4df3550c0e" name="Changes" comment="AboutPage Creation">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/headerSmall/HeaderSmall.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerSmall/HeaderSmall.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/headerSmall/HeaderSmall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headerSmall/HeaderSmall.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/views/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -20,6 +19,27 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <excluded-from-favorite>
++      <branch-storage>
++        <map>
++          <entry type="LOCAL">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$" source="master" />
++              </list>
++            </value>
++          </entry>
++          <entry type="REMOTE">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
++              </list>
++            </value>
++          </entry>
++        </map>
++      </branch-storage>
++    </excluded-from-favorite>
++    <option name="PUSH_AUTO_UPDATE" value="true" />
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+@@ -78,4 +98,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="AboutPage Creation" />
++    <option name="LAST_COMMIT_MESSAGE" value="AboutPage Creation" />
++  </component>
+ </project>
+\ No newline at end of file

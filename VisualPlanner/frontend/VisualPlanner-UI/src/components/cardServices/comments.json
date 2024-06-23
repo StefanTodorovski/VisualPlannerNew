@@ -1,0 +1,26 @@
+[
+  {
+    "serviceId": 1,
+    "profilePicture": "profile1.jpg",
+    "name": "John Doe",
+    "rating": 4,
+    "text": "Great service! Highly recommended.",
+    "timestamp": "2024-05-07T12:30:00Z"
+  },
+  {
+    "serviceId": 1,
+    "profilePicture": "profile2.jpg",
+    "name": "Jane Smith",
+    "rating": 5,
+    "text": "Very satisfied with the experience. Will definitely use again!",
+    "timestamp": "2024-05-06T15:45:00Z"
+  },
+  {
+    "serviceId": 2,
+    "profilePicture": "profile3.jpg",
+    "name": "Alice Johnson",
+    "rating": 3,
+    "text": "Good service overall, but could be improved in some areas.",
+    "timestamp": "2024-05-05T09:20:00Z"
+  }
+]

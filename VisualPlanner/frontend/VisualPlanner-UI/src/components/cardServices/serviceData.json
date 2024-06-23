@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "category": "grooming",
+    "serviceName": "Pet Grooming Service",
+    "providerName": "John Doe",
+    "image": "pet_groominh.png",
+    "gender": "Male",
+    "age": "3 years",
+    "price": "30 USD"
+  },
+  {
+    "id": 2,
+    "category": "walking",
+    "serviceName": "Dog Walking Service",
+    "providerName": "Jane Smith",
+    "image": "dog_walking.png",
+    "gender": "Female",
+    "age": "2 years",
+    "price": "20 USD"
+  },
+  {
+    "id": 3,
+    "category": "training",
+    "serviceName": "Pet Training Service",
+    "providerName": "Michael Johnson",
+    "image": "pet_training.webp",
+    "gender": "Male",
+    "age": "1 year",
+    "price": "50 USD"
+  },
+  {
+    "id": 4,
+    "category": "adoption",
+    "serviceName": "Pet Adoption Service",
+    "providerName": "Emily Brown",
+    "image": "pet_adoption.png",
+    "gender": "Female",
+    "age": "4 years",
+    "price": "Free"
+  },
+  {
+    "id": 5,
+    "category": "events",
+    "serviceName": "Pet Events Service",
+    "providerName": "David Martinez",
+    "image": "pet_event_2.png",
+    "gender": "Male",
+    "age": "5 years",
+    "price": "10 USD"
+  },
+  {
+    "id": 6,
+    "category": "veterinary",
+    "serviceName": "Veterinary Service",
+    "providerName": "Jessica Wilson",
+    "image": "veterinary_services.png",
+    "gender": "Male",
+    "age": "2 years",
+    "price": "100 USD"
+  },
+  {
+    "id": 7,
+    "category": "grooming",
+    "serviceName": "Pet Grooming Service",
+    "providerName": "John Doe",
+    "image": "pet_groominh.png",
+    "gender": "Male",
+    "age": "3 years",
+    "price": "30 USD"
+  },
+  {
+    "id": 8,
+    "category": "walking",
+    "serviceName": "Dog Walking Service",
+    "providerName": "Jane Smith",
+    "image": "dog_walking.png",
+    "gender": "Female",
+    "age": "2 years",
+    "price": "20 USD"
+  },
+  {
+    "id": 9,
+    "category": "training",
+    "serviceName": "Pet Training Service",
+    "providerName": "Michael Johnson",
+    "image": "pet_training.webp",
+    "gender": "Male",
+    "age": "1 year",
+    "price": "50 USD"
+  },
+  {
+    "id": 10,
+    "category": "adoption",
+    "serviceName": "Pet Adoption Service",
+    "providerName": "Emily Brown",
+    "image": "pet_adoption.png",
+    "gender": "Female",
+    "age": "4 years",
+    "price": "Free"
+  },
+  {
+    "id": 11,
+    "category": "events",
+    "serviceName": "Pet Events Service",
+    "providerName": "David Martinez",
+    "image": "pet_event_2.png",
+    "gender": "Male",
+    "age": "5 years",
+    "price": "10 USD"
+  }
+]

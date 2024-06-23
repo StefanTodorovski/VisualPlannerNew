@@ -1,0 +1,176 @@
+.comments-section {
+  margin-top: 20px;
+}
+
+.comment {
+  border-left: 3px solid #008000;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #008000;
+}
+
+.profile-rating {
+  color: #f0c040;
+  margin-bottom: 5px;
+}
+
+.comment-text {
+  margin-top: 10px;
+  color: #333;
+}
+
+.star {
+  font-size: 24px;
+  color: #f0c040;
+}
+
+.full-star,
+.half-star {
+  color: #f0c040;
+}
+
+.half-star {
+  position: relative;
+  display: inline-block;
+}
+
+.half-star::before {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 50%;
+}
+
+.comment-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  resize: vertical;
+}
+
+.comment-textarea:focus {
+  outline: none;
+}
+
+.post-comment-button {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.post-comment-button:hover {
+  background-color: #006400;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Edit and Delete Buttons */
+.comment-actions {
+  position: absolute;
+  right: 40px;
+  top: 90px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-comment-button,
+.delete-comment-button,
+.update-comment-button,
+.cancel-edit-button {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.edit-comment-button:hover,
+.delete-comment-button:hover,
+.update-comment-button:hover,
+.cancel-edit-button:hover {
+  background-color: #006400;
+}
+
+.delete-comment-button,
+.cancel-edit-button {
+  background-color: #ff0000;
+}
+
+.delete-comment-button:hover,
+.cancel-edit-button:hover {
+  background-color: #cc0000;
+}
+
+.edit-comment-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  resize: vertical;
+}
+
+.edit-comment-textarea:focus {
+  outline: none;
+}
+
+.edit-rating-input {
+  margin-top: 10px;
+}
+
+.rating-input {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.rating-input label {
+  margin-right: 10px;
+}
+
+.rating-input input {
+  width: 50px;
+  padding: 5px;
+}
+
+.text-bold {
+  font-weight: bold;
+}

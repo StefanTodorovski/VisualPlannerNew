@@ -1,0 +1,103 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.content-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-service-form {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-service-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #6f4e90;
+  font-weight: bold;
+}
+
+.add-service-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #6f4e90;
+}
+
+.add-service-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #6f4e90;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.add-service-form button:hover {
+  background-color: #8ccc88;
+}
+
+.add-service-form input[type="text"],
+.add-service-form textarea,
+.add-service-form select,
+.add-service-form input[type="number"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #6f4e90;
+  border-radius: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.add-service-form input[type="text"]:focus,
+.add-service-form textarea:focus,
+.add-service-form select:focus,
+.add-service-form input[type="number"]:focus {
+  border-color: #8ccc88;
+  outline: none;
+}
+
+.choose-picture-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #6f4e90;
+}
+
+.date-time-container {
+  display: flex;
+  gap: 110px;
+  border: none;
+}
+
+.date-time-picker {
+  flex: 1;
+  position: relative;
+  border: none;
+}
+.number-input {
+  -moz-appearance: textfield;
+}
+
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.error-message {
+  color: red;
+  margin-top: 30px;
+}

@@ -1,0 +1,418 @@
+Index: src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport { BrowserRouter as Router, Route, Routes } from 'react-router-dom';\r\nimport HomePage from './views/HomePage';\r\nimport CategoryPage from './views/CategoryPage';\r\nimport AboutPage from './views/AboutPage';\r\nimport ContactPage from './views/ContactPage';\r\nimport Footer from './components/footer/Footer';\r\nimport RegistrationPage from './views/RegistrationPage';\r\nimport LoginPage from './views/LoginPage';\r\nimport AddServicePage from './views/AddServicePage';\r\nimport ServicesPage from './views/ServicesPage';\r\nimport ServiceDetailsPage from './views/ServiceDetailsPage';\r\nimport PostPage from \"./views/PostPage\";\r\n\r\nfunction App() {\r\n    return (\r\n        <Router>\r\n            <Routes>\r\n                <Route path=\"/\" element={<HomePage />} exact />\r\n                <Route path=\"/category\" element={<CategoryPage />} exact />\r\n                <Route path=\"/about\" element={<AboutPage />} exact />\r\n                <Route path=\"/contact\" element={<ContactPage />} exact />\r\n                <Route path=\"/register\" element={<RegistrationPage />} exact />\r\n                <Route path=\"/login\" element={<LoginPage />} exact />\r\n                <Route path=\"/addService\" element={<AddServicePage />} exact />\r\n                <Route path=\"/services\" element={<ServicesPage />} exact />\r\n                <Route path=\"/details/:id\" element={<ServiceDetailsPage />} />\r\n                <Route path=\"/posts\" element={<PostPage/>} exact />\r\n            </Routes>\r\n            <Footer />\r\n        </Router>\r\n    );\r\n}\r\n\r\nexport default App;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/App.js b/src/App.js
+--- a/src/App.js	(revision 508a6f283cccec0e7d9fc877f4028f9c0ef8da4f)
++++ b/src/App.js	(date 1715535967189)
+@@ -11,6 +11,7 @@
+ import ServicesPage from './views/ServicesPage';
+ import ServiceDetailsPage from './views/ServiceDetailsPage';
+ import PostPage from "./views/PostPage";
++import ProfileDetailsPage from "./views/ProfileDetailsPage";
+ 
+ function App() {
+     return (
+@@ -26,6 +27,7 @@
+                 <Route path="/services" element={<ServicesPage />} exact />
+                 <Route path="/details/:id" element={<ServiceDetailsPage />} />
+                 <Route path="/posts" element={<PostPage/>} exact />
++                <Route path="/profile" element={<ProfileDetailsPage />} exact />
+             </Routes>
+             <Footer />
+         </Router>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"03a4626e-e2fa-4f45-b412-cf4df3550c0e\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/App.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/App.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/cardServices/CardService.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/cardServices/CardService.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/cardServices/CardServices.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/cardServices/CardServices.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/cardServices/serviceData.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/cardServices/serviceData.json\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"package.json\" />\r\n        <option value=\"JavaScript File\" />\r\n        <option value=\"CSS File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2ebEeUjquUnOGxmclpyr2ctuaVY\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Stefan Todorovski\\OneDrive\\Desktop\\VisualPlanner-UI\\src\\components\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"03a4626e-e2fa-4f45-b412-cf4df3550c0e\" name=\"Changes\" comment=\"\" />\r\n      <created>1712164984933</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1712164984933</updated>\r\n      <workItem from=\"1712164987948\" duration=\"1595000\" />\r\n      <workItem from=\"1712437233403\" duration=\"664000\" />\r\n      <workItem from=\"1712486232328\" duration=\"6883000\" />\r\n      <workItem from=\"1712505041235\" duration=\"24000\" />\r\n      <workItem from=\"1712917351092\" duration=\"5711000\" />\r\n      <workItem from=\"1713993994131\" duration=\"3977000\" />\r\n      <workItem from=\"1714141927226\" duration=\"6498000\" />\r\n      <workItem from=\"1714335368429\" duration=\"5379000\" />\r\n      <workItem from=\"1714409917914\" duration=\"471000\" />\r\n      <workItem from=\"1715083220535\" duration=\"8902000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 508a6f283cccec0e7d9fc877f4028f9c0ef8da4f)
++++ b/.idea/workspace.xml	(date 1715602422743)
+@@ -1,12 +1,15 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="03a4626e-e2fa-4f45-b412-cf4df3550c0e" name="Changes" comment="">
++    <list default="true" id="03a4626e-e2fa-4f45-b412-cf4df3550c0e" name="Changes" comment="AboutPage Creation">
++      <change afterPath="$PROJECT_DIR$/src/components/profileDetailsForm/ProfileDetailsForm.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/components/profileDetailsForm/ProfileDetailsForm.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/views/ProfileDetailsPage.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/cardServices/CardService.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cardServices/CardService.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/cardServices/CardServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cardServices/CardServices.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/cardServices/serviceData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cardServices/serviceData.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/views/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -17,8 +20,8 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="package.json" />
+-        <option value="JavaScript File" />
+         <option value="CSS File" />
++        <option value="JavaScript File" />
+       </list>
+     </option>
+   </component>
+@@ -41,7 +44,8 @@
+     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
+   <component name="RecentsManager">
+@@ -64,9 +68,12 @@
+       <workItem from="1712917351092" duration="5711000" />
+       <workItem from="1713993994131" duration="3977000" />
+       <workItem from="1714141927226" duration="6498000" />
+-      <workItem from="1714335368429" duration="5379000" />
+-      <workItem from="1714409917914" duration="471000" />
+-      <workItem from="1715083220535" duration="8902000" />
++      <workItem from="1714335368429" duration="4663000" />
++      <workItem from="1715257348260" duration="1812000" />
++      <workItem from="1715272644568" duration="90000" />
++      <workItem from="1715516570940" duration="12982000" />
++      <workItem from="1715540737179" duration="1295000" />
++      <workItem from="1715600807423" duration="1603000" />
+     </task>
+     <servers />
+   </component>
+Index: src/views/AboutPage.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport { Container, Row, Col } from 'react-bootstrap';\r\nimport HeaderSmall from '../components/headerSmall/HeaderSmall';\r\n// import Navbar from '../components/navigation/NavBar';\r\nimport './AboutPage.css'; // Make sure to create this CSS file and use the code below\r\nimport WomanHuggingDog from '../assets/woman-hugging-dog.png';\r\nimport Rectangle1 from '../assets/Rectangle1.png';\r\nimport Rectangle2 from '../assets/Rectangle2.png'\r\nimport Rectangle3 from '../assets/Rectangle3.png';\r\nimport Rectangle4 from '../assets/Rectangle4.png';\r\nimport Rectangle5 from '../assets/Rectangle5.png';\r\nimport Rectangle6 from '../assets/Rectangle6.png';\r\nimport Rectangle7 from '../assets/Rectangle7.png';\r\nimport RectangleNav from \"../assets/rectangle-nav.png\";\r\n\r\n\r\n// const AboutPage = () => {\r\n//     return (\r\n//         <div>\r\n//             <Navbar />\r\n//             <div className=\"about-page\">\r\n//                 <Container>\r\n//                     <Row className=\"about-elements\">\r\n//                         {/* Column for the text content */}\r\n//                         <Col md={6}>\r\n//                             <h1 className=\"title\">Welcome To Furry Footsteps!</h1>\r\n//                             <p className=\"description\">\r\n//                                 We're your one-stop destination for premium pet care services. From grooming and training to daycare and boarding, we offer everything your furry friend needs to thrive. Our experienced team provides personalized care tailored to your pet's unique needs, ensuring they feel safe and loved every step of the way. Join the Furry Footsteps family today and give your pet the exceptional care they deserve.\r\n//                             </p>\r\n//                         </Col>\r\n//\r\n//                         {/* Column for the image and decorative shapes */}\r\n//                         <Col md={6} className=\"about-container\">\r\n//                             {/* All the rectangle images */}\r\n//                             <img src={Rectangle1} className=\"rectangle rectangle-1\" alt=\"Decorative Shape\" />\r\n//                             {/* ...other rectangles... */}\r\n//                             {/* The woman and dog image */}\r\n//                             <div className=\"woman-hugging-dog\">\r\n//                                 <img src={WomanHuggingDog} alt=\"Woman hugging dog\" />\r\n//                             </div>\r\n//                         </Col>\r\n//                     </Row>\r\n//                 </Container>\r\n//             </div>\r\n//         </div>\r\n//     );\r\n// };\r\n//\r\n// export default AboutPage;\r\n\r\nconst AboutPage = () => {\r\n    return (\r\n        <div>\r\n            {/*<Navbar />*/}\r\n            <div className=\"rectangle-4\">\r\n                <img src={Rectangle4} alt=\"Decorative Shape\" />\r\n            </div>\r\n            <HeaderSmall />\r\n            <div className=\"about-page\">\r\n                <Container>\r\n                    <Row className=\"about-elements\">\r\n                        <Col md={6}>\r\n                            <h1 className=\"title\">Welcome To Furry Footsteps!</h1>\r\n                            <p className=\"description\">\r\n                                We're your one-stop destination for premium pet care services. From grooming and training to daycare and boarding, we offer everything your furry friend needs to thrive. Our experienced team provides personalized care tailored to your pet's unique needs, ensuring they feel safe and loved every step of the way. Join the Furry Footsteps family today and give your pet the exceptional care they deserve.\r\n                            </p>\r\n                            <div className=\"rectangle-3\">\r\n                                <img src={Rectangle3} alt=\"Decorative Shape\" />\r\n                            </div>\r\n                        </Col>\r\n                        <Col md={6}>\r\n                            <div className=\"about-container\">\r\n                                <img src={Rectangle5} className=\"rectangle rectangle-5\" alt=\"Decorative Shape\" />\r\n                                <img src={Rectangle6} className=\"rectangle rectangle-6\" alt=\"Decorative Shape\" />\r\n                                <img src={Rectangle7} className=\"rectangle rectangle-7\" alt=\"Decorative Shape\" />\r\n                                <img src={Rectangle1} className=\"rectangle rectangle-1\" alt=\"Decorative Shape\" />\r\n                                <img src={Rectangle2} className=\"rectangle rectangle-2\" alt=\"Decorative Shape\" />\r\n                            </div>\r\n                            <div className=\"woman-hugging-dog\">\r\n                                <img src={WomanHuggingDog}  alt=\"Woman hugging dog\" />\r\n                            </div>\r\n                        </Col>\r\n                    </Row>\r\n                </Container>\r\n            </div>\r\n        </div>\r\n    );\r\n}\r\n\r\nexport default AboutPage;
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/views/AboutPage.js b/src/views/AboutPage.js
+--- a/src/views/AboutPage.js	(revision 508a6f283cccec0e7d9fc877f4028f9c0ef8da4f)
++++ b/src/views/AboutPage.js	(date 1715272662840)
+@@ -13,41 +13,6 @@
+ import Rectangle7 from '../assets/Rectangle7.png';
+ import RectangleNav from "../assets/rectangle-nav.png";
+ 
+-
+-// const AboutPage = () => {
+-//     return (
+-//         <div>
+-//             <Navbar />
+-//             <div className="about-page">
+-//                 <Container>
+-//                     <Row className="about-elements">
+-//                         {/* Column for the text content */}
+-//                         <Col md={6}>
+-//                             <h1 className="title">Welcome To Furry Footsteps!</h1>
+-//                             <p className="description">
+-//                                 We're your one-stop destination for premium pet care services. From grooming and training to daycare and boarding, we offer everything your furry friend needs to thrive. Our experienced team provides personalized care tailored to your pet's unique needs, ensuring they feel safe and loved every step of the way. Join the Furry Footsteps family today and give your pet the exceptional care they deserve.
+-//                             </p>
+-//                         </Col>
+-//
+-//                         {/* Column for the image and decorative shapes */}
+-//                         <Col md={6} className="about-container">
+-//                             {/* All the rectangle images */}
+-//                             <img src={Rectangle1} className="rectangle rectangle-1" alt="Decorative Shape" />
+-//                             {/* ...other rectangles... */}
+-//                             {/* The woman and dog image */}
+-//                             <div className="woman-hugging-dog">
+-//                                 <img src={WomanHuggingDog} alt="Woman hugging dog" />
+-//                             </div>
+-//                         </Col>
+-//                     </Row>
+-//                 </Container>
+-//             </div>
+-//         </div>
+-//     );
+-// };
+-//
+-// export default AboutPage;
+-
+ const AboutPage = () => {
+     return (
+         <div>
+Index: src/components/profileDetailsForm/ProfileDetailsForm.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/components/profileDetailsForm/ProfileDetailsForm.js b/src/components/profileDetailsForm/ProfileDetailsForm.js
+new file mode 100644
+--- /dev/null	(date 1715601717379)
++++ b/src/components/profileDetailsForm/ProfileDetailsForm.js	(date 1715601717379)
+@@ -0,0 +1,65 @@
++import React from 'react';
++import './ProfileDetailsForm.css'; // Ensure you have this CSS file in the same folder as your component
++
++const ProfileDetailsForm = () => {
++    return (
++        <div className="profile-details-form">
++            <div className="profile-header">
++                <h2>Profile Details</h2>
++                <button className="edit-button">Edit</button>
++            </div>
++            <div className="profile-info">
++                <img src="/path-to-your-image.jpg" alt="Profile" className="profile-image"/>
++                <div className="info">
++                    <h3>Petar Petrovski</h3>
++                    <p><strong>Phone:</strong> +21293809827</p>
++                    <p><strong>Email:</strong> Yemmabakpierre@gmail.com</p>
++                    <p><strong>Location:</strong> Skopje, North Macedonia</p>
++                </div>
++            </div>
++            <div className="services-section">
++                <h4>Services</h4>
++                <div className="services-list">
++                    <div className="service-card">
++                        <img src="/path-to-service-image.jpg" alt="Service" className="service-image"/>
++                        <div className="service-info">
++                            <p><strong>Adoption</strong></p>
++                            <p>Size: Small - Location: Skopje, Macedonia</p>
++                            <button className="edit-service">Edit</button>
++                        </div>
++                    </div>
++                    {/* Repeat for other services */}
++                </div>
++            </div>
++        </div>
++    );
++};
++
++export default ProfileDetailsForm;
++// import React from 'react';
++//
++// const ProfileDetailsForm = ({ user, services }) => {
++//     return (
++//         <div className="profile-card">
++//             <div className="user-info">
++//                 <h2>{user.fullName}</h2>
++//                 <p>Phone: {user.phone}</p>
++//                 <p>Email: {user.email}</p>
++//                 <p>Location: {user.location}</p>
++//                 <button className="edit-button">Edit Information</button>
++//             </div>
++//             <div className="services-list">
++//                 {services.map(service => (
++//                     <div key={service.id} className="service-item">
++//                         <p>{service.name}</p>
++//                         <button className="edit-button">Edit</button>
++//                         <button className="delete-button">Delete</button>
++//                     </div>
++//                 ))}
++//                 <button className="add-service-button">Add Service</button>
++//             </div>
++//         </div>
++//     );
++// };
++//
++// export default ProfileDetailsForm;
+Index: src/components/profileDetailsForm/ProfileDetailsForm.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/components/profileDetailsForm/ProfileDetailsForm.css b/src/components/profileDetailsForm/ProfileDetailsForm.css
+new file mode 100644
+--- /dev/null	(date 1715601692295)
++++ b/src/components/profileDetailsForm/ProfileDetailsForm.css	(date 1715601692295)
+@@ -0,0 +1,82 @@
++/*.profile-details-form {*/
++/*    display: flex;*/
++/*    justify-content: space-between;*/
++/*    padding: 20px;*/
++/*}*/
++
++/*.profile-info, .services-list {*/
++/*    flex: 1;*/
++/*    margin: 10px;*/
++/*    padding: 20px;*/
++/*    border: 1px solid #ccc;*/
++/*    border-radius: 8px;*/
++/*}*/
++
++/*.services-list div {*/
++/*    margin-bottom: 10px;*/
++/*}*/
++
++/*button {*/
++/*    margin-top: 10px;*/
++/*    padding: 10px 20px;*/
++/*    background-color: #4CAF50;*/
++/*    color: white;*/
++/*    border: none;*/
++/*    border-radius: 5px;*/
++/*    cursor: pointer;*/
++/*}*/
++
++/*button:hover {*/
++/*    background-color: #45a049;*/
++/*}*/
++
++
++
++.profile-card {
++    background: white;
++    border-radius: 10px;
++    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
++    padding: 20px;
++    margin: 20px auto;
++    width: 90%;
++    max-width: 600px;
++}
++
++.user-info, .services-list {
++    margin-bottom: 20px;
++}
++
++.edit-button, .delete-button, .add-service-button {
++    background-color: #4CAF50; /* Green */
++    border: none;
++    color: white;
++    padding: 10px 20px;
++    text-align: center;
++    text-decoration: none;
++    display: inline-block;
++    font-size: 16px;
++    margin: 4px 2px;
++    transition-duration: 0.4s;
++    cursor: pointer;
++    border-radius: 5px;
++}
++
++.edit-button:hover, .delete-button:hover, .add-service-button:hover {
++    background-color: white;
++    color: black;
++    border: 1px solid #4CAF50;
++}
++
++.service-item {
++    display: flex;
++    justify-content: space-between;
++    align-items: center;
++    padding: 10px;
++    border-bottom: 1px solid #ccc;
++}
++
++.service-item:last-child {
++    border-bottom: none;
++}
++
++
+Index: src/views/ProfileDetailsPage.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/views/ProfileDetailsPage.js b/src/views/ProfileDetailsPage.js
+new file mode 100644
+--- /dev/null	(date 1715538912379)
++++ b/src/views/ProfileDetailsPage.js	(date 1715538912379)
+@@ -0,0 +1,21 @@
++import React from 'react';
++import HeaderSmall from '../components/headerSmall/HeaderSmall';
++import Footer from '../components/footer/Footer';
++import ProfileDetailsForm from '../components/profileDetailsForm/ProfileDetailsForm';
++import "../components/registrationForm/RegisterForm.css";
++
++
++
++const ProfileDetailsPage = () => {
++    return (
++        <div>
++            <HeaderSmall />
++            <div className="profile-details-container">
++                <ProfileDetailsForm />
++            </div>
++            {/*<Footer />*/}
++        </div>
++    );
++}
++
++export default ProfileDetailsPage;
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"name\": \"visual-planner-fe\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \"dependencies\": {\r\n    \"@testing-library/jest-dom\": \"^5.17.0\",\r\n    \"@testing-library/react\": \"^13.4.0\",\r\n    \"@testing-library/user-event\": \"^13.5.0\",\r\n    \"bootstrap\": \"^5.3.3\",\r\n    \"react\": \"^18.2.0\",\r\n    \"react-bootstrap\": \"^2.10.2\",\r\n    \"react-dom\": \"^18.2.0\",\r\n    \"react-icons\": \"^5.0.1\",\r\n    \"react-router-dom\": \"^6.22.3\",\r\n    \"react-scripts\": \"5.0.1\",\r\n    \"web-vitals\": \"^2.1.4\"\r\n  },\r\n  \"scripts\": {\r\n    \"start\": \"react-scripts start\",\r\n    \"build\": \"react-scripts build\",\r\n    \"test\": \"react-scripts test\",\r\n    \"eject\": \"react-scripts eject\"\r\n  },\r\n  \"eslintConfig\": {\r\n    \"extends\": [\r\n      \"react-app\",\r\n      \"react-app/jest\"\r\n    ]\r\n  },\r\n  \"browserslist\": {\r\n    \"production\": [\r\n      \">0.2%\",\r\n      \"not dead\",\r\n      \"not op_mini all\"\r\n    ],\r\n    \"development\": [\r\n      \"last 1 chrome version\",\r\n      \"last 1 firefox version\",\r\n      \"last 1 safari version\"\r\n    ]\r\n  },\r\n  \"devDependencies\": {\r\n    \"@babel/plugin-proposal-private-property-in-object\": \"^7.21.11\",\r\n    \"css-loader\": \"^7.1.1\",\r\n    \"style-loader\": \"^4.0.0\"\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/package.json b/package.json
+--- a/package.json	(revision 508a6f283cccec0e7d9fc877f4028f9c0ef8da4f)
++++ b/package.json	(date 1715540665952)
+@@ -6,6 +6,7 @@
+     "@testing-library/jest-dom": "^5.17.0",
+     "@testing-library/react": "^13.4.0",
+     "@testing-library/user-event": "^13.5.0",
++    "axios": "^1.6.8",
+     "bootstrap": "^5.3.3",
+     "react": "^18.2.0",
+     "react-bootstrap": "^2.10.2",
+Index: package-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/package-lock.json b/package-lock.json
+--- a/package-lock.json	(revision 508a6f283cccec0e7d9fc877f4028f9c0ef8da4f)
++++ b/package-lock.json	(date 1715540666887)
+@@ -11,6 +11,7 @@
+         "@testing-library/jest-dom": "^5.17.0",
+         "@testing-library/react": "^13.4.0",
+         "@testing-library/user-event": "^13.5.0",
++        "axios": "^1.6.8",
+         "bootstrap": "^5.3.3",
+         "react": "^18.2.0",
+         "react-bootstrap": "^2.10.2",
+@@ -5559,6 +5560,29 @@
+         "node": ">=4"
+       }
+     },
++    "node_modules/axios": {
++      "version": "1.6.8",
++      "resolved": "https://registry.npmjs.org/axios/-/axios-1.6.8.tgz",
++      "integrity": "sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==",
++      "dependencies": {
++        "follow-redirects": "^1.15.6",
++        "form-data": "^4.0.0",
++        "proxy-from-env": "^1.1.0"
++      }
++    },
++    "node_modules/axios/node_modules/form-data": {
++      "version": "4.0.0",
++      "resolved": "https://registry.npmjs.org/form-data/-/form-data-4.0.0.tgz",
++      "integrity": "sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==",
++      "dependencies": {
++        "asynckit": "^0.4.0",
++        "combined-stream": "^1.0.8",
++        "mime-types": "^2.1.12"
++      },
++      "engines": {
++        "node": ">= 6"
++      }
++    },
+     "node_modules/axobject-query": {
+       "version": "3.2.1",
+       "resolved": "https://registry.npmjs.org/axobject-query/-/axobject-query-3.2.1.tgz",
+@@ -14983,6 +15007,11 @@
+         "node": ">= 0.10"
+       }
+     },
++    "node_modules/proxy-from-env": {
++      "version": "1.1.0",
++      "resolved": "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz",
++      "integrity": "sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg=="
++    },
+     "node_modules/psl": {
+       "version": "1.9.0",
+       "resolved": "https://registry.npmjs.org/psl/-/psl-1.9.0.tgz",

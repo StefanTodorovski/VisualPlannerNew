@@ -1,0 +1,278 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,23 +1,25 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="03a4626e-e2fa-4f45-b412-cf4df3550c0e" name="Changes" comment="">
++    <list default="true" id="515bb015-f1b2-4ee6-9211-1647efba5d8b" name="Changes" comment="Login Page creation">
++      <change afterPath="$PROJECT_DIR$/src/assets/Rectangle1.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/assets/Rectangle2.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/assets/Rectangle3.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/assets/Rectangle4.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/assets/Rectangle5.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/assets/Rectangle6.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/assets/Rectangle7.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/assets/Rectangle8.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/assets/woman-hugging-dog.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/views/AboutPage.css" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/registrationForm/RegisterForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registrationForm/RegisterForm.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/views/RegistrationPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegistrationPage.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/views/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutPage.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="JavaScript File" />
+-      </list>
+-    </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -25,6 +27,9 @@
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
++  <component name="PackageJsonUpdateNotifier">
++    <dismissed value="$PROJECT_DIR$/package.json" />
++  </component>
+   <component name="ProjectId" id="2ebEeUjquUnOGxmclpyr2ctuaVY" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+@@ -35,25 +40,46 @@
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/kovac/WebstormProjects/VisualPlanner-UI/src/assets&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\kovac\WebstormProjects\VisualPlanner-UI\src\assets" />
++    </key>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="03a4626e-e2fa-4f45-b412-cf4df3550c0e" name="Changes" comment="" />
++      <changelist id="515bb015-f1b2-4ee6-9211-1647efba5d8b" name="Changes" comment="Footer creation" />
+       <created>1712164984933</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1712164984933</updated>
+       <workItem from="1712164987948" duration="1595000" />
+       <workItem from="1712437233403" duration="664000" />
+-      <workItem from="1712486232328" duration="6883000" />
+-      <workItem from="1712505041235" duration="24000" />
+-      <workItem from="1712917351092" duration="5550000" />
++      <workItem from="1712486232328" duration="6196000" />
++      <workItem from="1713438642314" duration="8353000" />
++      <workItem from="1713539125252" duration="5935000" />
++      <workItem from="1713629183519" duration="6806000" />
++      <workItem from="1713696517445" duration="10289000" />
++      <workItem from="1713892117374" duration="459000" />
++      <workItem from="1713892590111" duration="294000" />
++      <workItem from="1713974870747" duration="4347000" />
+     </task>
++    <task id="LOCAL-00001" summary="Login Page creation">
++      <created>1713632919246</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1713632919246</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -70,4 +96,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Login Page creation" />
++    <option name="LAST_COMMIT_MESSAGE" value="Login Page creation" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/views/AboutPage.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/views/AboutPage.css b/src/views/AboutPage.css
+new file mode 100644
+--- /dev/null	
++++ b/src/views/AboutPage.css	
+@@ -0,0 +1,134 @@
++.navbar {
++    background-color: #8BC686 !important;
++}
++
++.about-page {
++    position: relative;
++    width: 100%;
++    padding-top: 100px; /* Adjust this value to suit your header height */
++    min-height: 100vh; /* Full height */
++    background: linear-gradient(0deg, #8BC686, #8BC686);
++    color: white; /* Text color */
++    font-family: 'Fira Sans', sans-serif; /* Your chosen font */
++}
++.about-title {
++    font-size: 4rem; /* Big title size */
++    margin-bottom: 2rem; /* Space under title */
++    text-align: center; /* Center align title */
++}
++
++.about-description {
++    font-size: 1.5rem; /* Description text size */
++    margin-bottom: 2rem; /* Space under description */
++    text-align: center; /* Center align description */
++}
++
++.about-container {
++    flex-direction: column; /* Stack children vertically */
++    align-items: center; /* Center items on cross axis */
++    justify-content: center; /* Center items on main axis */
++    max-width: 1200px; /* Maximum width of content */
++    margin: auto; /* Center container */
++    display: flex;
++}
++
++
++.explore-button {
++    background: #8CCC88;
++    color: white;
++    padding: 1rem 2rem;
++    border: none;
++    border-radius: 50px;
++    font-size: 1.25rem;
++    cursor: pointer;
++    text-align: center;
++    margin: 2rem auto; /* Space around button and center */
++}
++.click-here {
++    position: absolute;
++    width: auto;
++    height: auto;
++    right: 5%; /* Adjust right position as needed */
++    bottom: 2%; /* Adjust bottom position as needed */
++    font-family: 'Fira Sans', sans-serif;
++    font-size: 1.3vw; /* Adjust font size for responsiveness */
++    color: #FDFDFD;
++}
++
++.woman-hugging-dog {
++    float: right;
++    position: absolute;
++    left: 500px;
++    z-index: 10; /* This should be higher than the rectangles' z-index */
++    transform: scale(0.9);
++    bottom: 0px;
++}
++
++.rectangle {
++    position: absolute;
++    /* Use width and height as needed or let them be auto if the images define their size */
++
++}
++
++.rectangle-1 {
++    position: absolute;
++    left: 500px;
++    z-index: 5;
++    transform: scale(0.9);
++    bottom: 0px;
++
++    /* Adjust size if needed */
++}
++
++.rectangle-2 {
++    position: absolute;
++    transform: scale(0.9);
++    left: 540px;
++    z-index: 5;
++    bottom: 0px;
++    /* Adjust size if needed */
++}
++
++.rectangle-7 {
++    bottom: 0px;
++    left: 100px;
++    transform: scale(0.8);
++    bottom: 0px;
++    /* Adjust size if needed */
++}
++
++.rectangle-8 {
++    bottom: 600px;
++    right: 800px;
++    position: absolute;
++    z-index: 5;
++
++    /* Adjust size if needed */
++}
++
++/* Style for the rest of the about page elements */
++.title {
++    /* Styles for your title */
++}
++
++.description {
++    /* Styles for your description */
++}
++/* Add other styles as needed */
++
++/* Media Queries for responsiveness */
++@media screen and (max-width: 768px) {
++    .about-title {
++        font-size: 3rem; /* Smaller title for mobile */
++    }
++    .about-description {
++        font-size: 1rem; /* Smaller text for mobile */
++    }
++    .woman-with-dog {
++        max-width: 80%; /* Increase width on smaller screens */
++    }
++    .explore-button {
++        padding: 0.75rem 1.5rem; /* Smaller button for mobile */
++        font-size: 1rem; /* Smaller font for mobile */
++    }
++}
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/package.json b/package.json
+--- a/package.json	
++++ b/package.json	
+@@ -12,7 +12,7 @@
+     "react-dom": "^18.2.0",
+     "react-icons": "^5.0.1",
+     "react-router-dom": "^6.22.3",
+-    "react-scripts": "5.0.1",
++    "react-scripts": "^3.0.1",
+     "web-vitals": "^2.1.4"
+   },
+   "scripts": {
