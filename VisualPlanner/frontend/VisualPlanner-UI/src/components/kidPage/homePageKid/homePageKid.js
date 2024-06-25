@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { HexColorPicker } from 'react-colorful';
 import './homePageKid.css';
 import avatar1 from "../../../assets/avatar1.png";
@@ -9,18 +9,20 @@ import avatar5 from "../../../assets/avatar5.png";
 import games from "../../../assets/gamesgif.gif";
 import tasks from "../../../assets/tasks.gif";
 import points from "../../../assets/points.gif";
-import robotGif from "../../../assets/robot.gif";  // Assuming you have this gif in the assets folder
-import axios from 'axios';
-import robotAudio from "../../../assets/robot.mp3";  // Assuming you have this audio file in the assets folder
+import robotGif from "../../../assets/robot.gif";
+import robotAudio from "../../../assets/robot.mp3";
 import axiosInstance from '../../../services/axiosInstance';
+import { useNavigate } from "react-router-dom";
 
 const HomePageKid = () => {
-  const [selectedColor, setSelectedColor] = useState('#ffffff');
+  const [selectedColor, setSelectedColor] = useState('#4682B4');
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [showAvatarDialog, setShowAvatarDialog] = useState(false);
   const [selectedAvatar, setSelectedAvatar] = useState(avatar1);
   const [showRobotDialog, setShowRobotDialog] = useState(false);
   const [userId, setUserId] = useState(null);
+  const colorPickerRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const userData = localStorage.getItem("userData");
@@ -30,6 +32,17 @@ const HomePageKid = () => {
     } else {
       console.log("No user data found in localStorage");
     }
+
+    const handleClickOutside = (event) => {
+      if (colorPickerRef.current && !colorPickerRef.current.contains(event.target)) {
+        setShowColorPicker(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);  // Empty dependency array ensures this runs only once after the initial render
 
   const handleColorChange = (color) => {
@@ -48,6 +61,10 @@ const HomePageKid = () => {
     setSelectedAvatar(avatarUrl);
     toggleAvatarDialog();
   };
+
+  const handlePointsClick = () => {
+    navigate("/points-page-kid")
+  }
 
   const handleGamesClick = async () => {
     if (userId) {
@@ -95,7 +112,7 @@ const HomePageKid = () => {
       <div className="color-circle" style={{ backgroundColor: selectedColor }} onClick={toggleColorPicker}></div>
 
       {showColorPicker && (
-        <div className="color-picker-container">
+        <div className="color-picker-container" ref={colorPickerRef}>
           <HexColorPicker
             color={selectedColor}
             onChange={handleColorChange}
@@ -111,7 +128,7 @@ const HomePageKid = () => {
         <div className="side-column">
           <img src={tasks} alt="Tasks" className="side-gif" />
         </div>
-        <div className="side-column">
+        <div className="side-column" onClick={handlePointsClick}>
           <img src={points} alt="Points" className="side-gif" />
         </div>
       </div>

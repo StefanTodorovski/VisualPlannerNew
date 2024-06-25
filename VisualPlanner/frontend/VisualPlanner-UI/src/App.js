@@ -21,6 +21,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import getAllKidAgeGroups from "./services/KidAgeGroup/getAllAgeGroups.js";
 import HomePageKid from "./components/kidPage/homePageKid/homePageKid.js";
+import PointsPageKid from "./components/kidPage/pointsPageKid/pointsPageKid.js";
 
 function App() {
   const [activityTypes, setActivityTypes] = useState([]);
@@ -122,6 +123,7 @@ function App() {
         />
         <Route path="/about" element={<AboutPage user={user} />} exact />
         <Route path="/home-page-kid" element={<HomePageKid user={user} />} exact />
+        <Route path="/points-page-kid" element={<PointsPageKid user={user} />} exact />
         <Route
           path="/contact"
           element={<ContactPage user={user} refreshUser={refreshUser} />}
