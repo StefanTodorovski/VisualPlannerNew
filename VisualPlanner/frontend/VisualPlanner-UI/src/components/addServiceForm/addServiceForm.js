@@ -135,10 +135,10 @@ const AddServiceForm = ({
         className="button edit-information"
         onClick={handleBackToProfileButton}
       >
-        &larr; Back to profile
+        &larr; Назад кон профилот
       </button>
       <div className="add-service-form">
-        <h2>{postToEdit ? "Edit Task" : "Add a new Task"}</h2>
+        <h2>{postToEdit ? "Измени ја задачата" : "Додади нова задача"}</h2>
         <form onSubmit={handleSubmit}>
           <select
             name="activityTypeId"
@@ -148,7 +148,7 @@ const AddServiceForm = ({
             className="form-input"
           >
             <option value="" disabled>
-              Please select a task type
+              Избери тип на задача
             </option>
             {activityTypes.map((activityType) => (
               <option key={activityType.id} value={activityType.id}>
@@ -175,7 +175,7 @@ const AddServiceForm = ({
             className="form-input"
           >
             <option value="" disabled>
-              Select kid age group
+              Избери група на возраст
             </option>
             {petTypes.map((petType) => (
               <option key={petType.id} value={petType.id}>
@@ -192,16 +192,16 @@ const AddServiceForm = ({
             className="form-input"
           >
             <option value="" disabled>
-              Select importance level
+              Избери ниво на значајност на задачата
             </option>
-            <option value="Low_priority">Low priority</option>
-            <option value="Important">Important</option>
-            <option value="Critical">Critical</option>
+            <option value="Low_priority">Низок приоритет</option>
+            <option value="Important">Среден приоритет</option>
+            <option value="Critical">Висок приоритет</option>
           </select>
 
           <textarea
             name="description"
-            placeholder="Add additional task description"
+            placeholder="Додадете опис на задачата"
             value={formData.description}
             onChange={handleInputChange}
             required
@@ -217,7 +217,7 @@ const AddServiceForm = ({
               <div key={index} className="date-time-container">
                 <div className="date-time-picker">
                   <label className="choose-picture-label">
-                    Date and Time From:
+                    Датум од:
                   </label>
                   <MobileDateTimePicker
                     onChange={(value) =>
@@ -227,7 +227,7 @@ const AddServiceForm = ({
                 </div>
                 <div className="date-time-picker">
                   <label className="choose-picture-label">
-                    Date and Time To:
+                    Датум до:
                   </label>
                   <MobileDateTimePicker
                     onChange={(value) =>
@@ -240,11 +240,11 @@ const AddServiceForm = ({
           </div>
 
           <button type="button" onClick={handleAddTime}>
-            Add Time
+            Додади време за извршување на задачата
           </button>
 
           <label htmlFor="picture" className="choose-picture-label">
-            Choose photo to make the task more descriptive
+            Избери слика за дополнителен опис на задачата
           </label>
           <input
             id="picture"
@@ -259,7 +259,7 @@ const AddServiceForm = ({
 
           <div style={{ marginTop: "50px" }}>
             <button type="submit">
-              {postToEdit ? "Update Task" : "Add "}
+              {postToEdit ? "Измени задача" : "Додади"}
             </button>
           </div>
         </form>

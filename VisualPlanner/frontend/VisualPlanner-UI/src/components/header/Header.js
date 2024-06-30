@@ -24,13 +24,13 @@ const Header = ({ user, refreshUser }) => {
               <div className="rectangle-middle">
                 <img src={RectangleMiddle} alt="rectangle-middle" />
               </div>
-              <h1 className="title">Easier today, easier tomorrow</h1>
+              <h1 className="title">Организирајте го вашиот ден!</h1>
               <p className="description">
-              Having a plan and following it means you have more vision, a clear path, and become a happy and accomplished person who will always be on time and have fun.
+              Ако имате план и го следите, значи дека имате повеќе визија, јасен пат и ќе останете среќна и остварена личност која секогаш ќе биде на време и ќе се забавува
               </p>
               <Link to="/services">
                 {" "}
-                <button className="explore-button">Explore Now</button>
+                <button className="explore-button">Истражи повеќе</button>
               </Link>
               <div className="rectangle-bottom">
                 <img src={RectangleBottom} alt="rectangle-bottom" />

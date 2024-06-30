@@ -123,7 +123,7 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
           </div>
         ) : (
           <div className="profile-info">
-            <h2>Information Summary</h2>
+            <h2>Информации за профилот</h2>
             <div className="profile-header">
               {user && user.picture ? (
                 <img
@@ -131,23 +131,23 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
                   alt={user.serviceName}
                 />
               ) : (
-                <p>No picture</p>
+                <p>Немате прикачено слика</p>
               )}
             </div>
 
             {user && (
               <>
                 <p>
-                  <strong>Full name:</strong> {`${user.name} ${user.surname}`}
+                  <strong>Име и презиме</strong> {`${user.name} ${user.surname}`}
                 </p>
                 <p>
-                  <strong>Phone:</strong> {user.phone}
+                  <strong>Телефонски број:</strong> {user.phone}
                 </p>
                 <p>
-                  <strong>Email:</strong> {user.email}
+                  <strong>Е-пошта:</strong> {user.email}
                 </p>
                 <p>
-                  <strong>Location:</strong> {user.location}
+                  <strong>Адреса на живеење:</strong> {user.location}
                 </p>
               </>
             )}
@@ -157,20 +157,20 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
               className="button edit-information"
               onClick={toggleEditMode}
             >
-              Update Information
+              Изменете ги податоците
             </button>
             <button className="button logout" onClick={handleLogout}>
-              Logout
+              Одлогирај се
             </button>
             <br />
           </div>
         )}
 
         <div className="services-details">
-          <h2>Manage your kids day</h2>
+          <h2>Моментално креирани задачи</h2>
           <div className="services-list">
             {userPosts.length === 0 ? (
-              <p>You don't have any posts. Create here!</p>
+              <p>Сеуште немате креирано задача. Креирајте ја тука !</p>
             ) : (
               userPosts.map((service) => (
                 <div key={service.id} className="service-item">
@@ -182,7 +182,7 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
                         className="service-image"
                       />
                     ) : (
-                      <p>Loading...</p>
+                      <p>Се вчитува...</p>
                     )}
                   </Link>
                   <h4>{service.activityTypeName}</h4>
@@ -191,37 +191,37 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
                     className="button edit"
                     onClick={() => handleEdit(service)}
                   >
-                    Edit
+                    Измени
                   </button>
                   <button
                     className="button delete"
                     onClick={() => handlePostDelete(service.id)}
                   >
-                    Delete
+                    Избриши
                   </button>
                 </div>
               ))
             )}
           </div>
           <Link to="/addService" className="button add-service">
-            Add a new task +
+            Додади нова задача +
           </Link>
         </div>
         <div className="requests-section">
-          <h2>Approve or decline your kids finished tasks</h2>
+          <h2>Непрегледани задачи</h2>
           <table className="requests-table">
             <thead>
               <tr>
-                <th>Requested By</th>
-                <th>Task</th>
-                <th>Time</th>
-                <th>Actions</th>
+                <th>Креирано барање од</th>
+                <th>Задача</th>
+                <th>Време</th>
+                <th>Акции</th>
               </tr>
             </thead>
             <tbody>
               {postRequestsPoster.length === 0 ? (
                 <tr>
-                  <td colSpan="4">No requests on your posts found.</td>
+                  <td colSpan="4">Моментално нема непрегледани задачи</td>
                 </tr>
               ) : (
                 postRequestsPoster.map((request) => (
@@ -243,13 +243,13 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
                           )
                         }
                       >
-                        Accept
+                        Одобри
                       </button>
                       <button
                         className="button decline"
                         onClick={() => handleDecline(request.requestId)}
                       >
-                        Decline
+                        Одбиј
                       </button>
                     </td>
                   </tr>
@@ -259,14 +259,14 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
           </table>
         </div>
         <div className="requests-section">
-          <h2>Task status</h2>
+          <h2>Прегледани задачи</h2>
           <table className="requests-table">
             <thead>
               <tr>
-                <th>Posted By</th>
-                <th>Task</th>
-                <th>Time</th>
-                <th>Status</th>
+                <th>Креирано од</th>
+                <th>Задача</th>
+                <th>Време</th>
+                <th>Статус</th>
               </tr>
             </thead>
             <tbody>
