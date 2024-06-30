@@ -1,0 +1,32 @@
+/* GamesPageKid.css */
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .game-card {
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 45%; /* Adjust as needed for spacing */
+    max-width: 300px; /* Limit width for smaller screens */
+  }
+  
+  .game-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .game-card {
+      width: 100%; /* Full width on smaller screens */
+      max-width: none; /* Remove max-width */
+    }
+  }
+  
