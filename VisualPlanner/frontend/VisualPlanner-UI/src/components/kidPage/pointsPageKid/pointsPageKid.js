@@ -6,6 +6,9 @@ import cloud1 from '../../../assets/cloud1.png';
 import cloud2 from '../../../assets/cloud2.png';
 import axiosInstance from '../../../services/axiosInstance';
 import { useNavigate } from "react-router-dom";
+import { MdArrowBack } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+
 
 const PointsPageKid = () => {
   const [points, setPoints] = useState(0);
@@ -49,6 +52,9 @@ const PointsPageKid = () => {
 
   return (
     <div className="points-page-container">
+        <Link to="/home-page-kid" className="back-link">
+          <MdArrowBack className="back-icon" />
+        </Link>
         <div className="back-button" onClick={handleBackClick}>
         <img src={arrowImage} alt="Back" className="arrow-image" />
         </div>

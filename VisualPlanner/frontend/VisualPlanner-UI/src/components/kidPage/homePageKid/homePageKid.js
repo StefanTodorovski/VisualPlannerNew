@@ -66,12 +66,16 @@ const HomePageKid = () => {
     navigate("/points-page-kid")
   }
 
+  const handleTaskClick = () => {
+    navigate("/tasks-page-kid")
+  }
+
   const handleGamesClick = async () => {
     if (userId) {
       try {
         const response = await axiosInstance.get(`/users/${userId}/points`);
         const points = response.data;
-        if (points === 0) {
+        if (points <= 500) {
           setShowRobotDialog(true);
           const audio = new Audio(robotAudio);
           audio.play();
@@ -126,7 +130,7 @@ const HomePageKid = () => {
           <img src={games} alt="Games" className="side-gif" />
         </div>
         <div className="side-column">
-          <img src={tasks} alt="Tasks" className="side-gif" />
+          <img src={tasks} alt="Tasks" className="side-gif" onClick={handleTaskClick} />
         </div>
         <div className="side-column" onClick={handlePointsClick}>
           <img src={points} alt="Points" className="side-gif" />

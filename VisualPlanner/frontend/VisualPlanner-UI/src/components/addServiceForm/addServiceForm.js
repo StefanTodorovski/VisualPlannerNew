@@ -5,6 +5,7 @@ import axiosInstance from "../../services/axiosInstance";
 import { MobileDateTimePicker } from "@mui/x-date-pickers";
 import { format, isPast } from "date-fns";
 import { toast } from "react-toastify";
+import PhotoSelectionModal from "../photoSelectionModal/PhotoSelectionModal"; // Import the modal
 
 const AddServiceForm = ({
   activityTypes,
@@ -29,6 +30,9 @@ const AddServiceForm = ({
     picture: [],
     userId: userId,
   });
+
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedPhoto, setSelectedPhoto] = useState("");
 
   useEffect(() => {
     if (postToEdit) {
@@ -55,26 +59,37 @@ const AddServiceForm = ({
     });
   };
 
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
+  const handlePhotoSelect = (photo) => {
+    const convertImageToByteArray = (imageUrl) => {
+      return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", imageUrl, true);
+        xhr.responseType = "arraybuffer";
+        xhr.onload = function () {
+          if (this.status === 200) {
+            const byteArray = new Uint8Array(this.response);
+            resolve(Array.from(byteArray));
+          } else {
+            reject(new Error("Failed to load image"));
+          }
+        };
+        xhr.send();
+      });
+    };
 
-    console.log("File object: ", file);
-
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const arrayBuffer = reader.result;
-        const uint8Array = new Uint8Array(arrayBuffer);
+    convertImageToByteArray(photo)
+      .then((byteArray) => {
+        setSelectedPhoto(photo);
         setFormData({
           ...formData,
-          picture: Array.from(uint8Array),
+          picture: byteArray,
         });
-      };
+      })
+      .catch((error) => {
+        console.error("Error converting image to byte array:", error);
+      });
 
-      reader.readAsArrayBuffer(file);
-    } else {
-      console.error("No file select or object is undefined");
-    }
+    setModalOpen(false);
   };
 
   const handleDateTimeChange = (index, field, value) => {
@@ -104,18 +119,14 @@ const AddServiceForm = ({
   };
 
   const handleSubmit = async (event) => {
-    console.log(formData);
     event.preventDefault();
     try {
-      console.log(formData);
       if (postToEdit) {
         await axiosInstance.put(`/posts/${postToEdit.id}`, formData);
-        console.log("Post updated successfully");
         toast.success("Post updated successfully.");
       } else {
         await axiosInstance.post("/posts/add", formData);
         toast.success("Post added successfully.");
-        console.log("Post added successfully");
       }
       navigate("/profile");
       refreshUserPosts(userId);
@@ -127,6 +138,10 @@ const AddServiceForm = ({
 
   const handleBackToProfileButton = () => {
     navigate("/profile");
+  };
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
   };
 
   return (
@@ -212,13 +227,12 @@ const AddServiceForm = ({
               borderRadius: "12px",
             }}
           />
+
           <div>
             {formData.availabilities.map((availability, index) => (
               <div key={index} className="date-time-container">
                 <div className="date-time-picker">
-                  <label className="choose-picture-label">
-                    Датум од:
-                  </label>
+                  <label className="choose-picture-label">Датум од:</label>
                   <MobileDateTimePicker
                     onChange={(value) =>
                       handleDateTimeChange(index, "dateTimeFrom", value)
@@ -226,9 +240,7 @@ const AddServiceForm = ({
                   />
                 </div>
                 <div className="date-time-picker">
-                  <label className="choose-picture-label">
-                    Датум до:
-                  </label>
+                  <label className="choose-picture-label">Датум до:</label>
                   <MobileDateTimePicker
                     onChange={(value) =>
                       handleDateTimeChange(index, "dateTimeTo", value)
@@ -244,17 +256,17 @@ const AddServiceForm = ({
           </button>
 
           <label htmlFor="picture" className="choose-picture-label">
-            Избери слика за дополнителен опис на задачата
+            Избери анимација за дополнителен опис на задачата
           </label>
-          <input
-            id="picture"
-            type="file"
-            accept="image/*"
-            name="picture"
-            onChange={handleFileChange}
-            className="form-input"
-            required
-          />
+          <button type="button" onClick={handleOpenModal}>
+            Избери анимација
+          </button>
+          {selectedPhoto && (
+            <div>
+              <p>Избрана анимација за задачата:</p>
+              <img src={selectedPhoto} alt="Selected" style={{ width: "200px", height: "200px" }} />
+            </div>
+          )}
           {error && <p className="error-message">{error}</p>}
 
           <div style={{ marginTop: "50px" }}>
@@ -264,6 +276,12 @@ const AddServiceForm = ({
           </div>
         </form>
       </div>
+
+      <PhotoSelectionModal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        onSelectPhoto={handlePhotoSelect}
+      />
 
       <br />
     </div>

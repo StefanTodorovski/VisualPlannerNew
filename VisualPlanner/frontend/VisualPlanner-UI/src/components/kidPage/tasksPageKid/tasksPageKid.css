@@ -1,0 +1,140 @@
+/* tasksPageKid.css */
+
+.tasks-page-kid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background-color: #4682B4; /* Blue background color */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limiting width for content */
+  }
+  
+  .back-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .back-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .tasks-page-kid h1 {
+    margin: 0;
+    color: white;
+    text-align: center; /* Center the text within h1 */
+  }
+  
+  .tasks-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Center the task items horizontally */
+    align-items: flex-start; /* Align items at the start (top) */
+  }
+  
+  .task-item {
+    position: relative;
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #f0f0f0; /* Light gray background */
+  }
+  
+  .task-item:hover {
+    transform: scale(1.05); /* Example hover effect */
+  }
+  
+  .task-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .task-done {
+    /* Styles for tasks that are marked as done */
+    filter: grayscale(100%); /* Example: grayscale the image */
+    opacity: 0.7; /* Example: reduce opacity */
+    border: 2px solid green; /* Example: green border */
+  }
+  
+  .dialog-overlay {
+    /* Styles for the dialog overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dialog {
+    /* Styles for the dialog content */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: center;
+  }
+  
+  .dialog-robot {
+    /* Styles for the robot image */
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+  }
+  
+  .dialog-buttons {
+    /* Styles for the buttons in the dialog */
+    margin-top: 20px;
+  }
+  
+  .dialog-button-green {
+    /* Styles for the green button */
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .dialog-button-green:hover {
+    background-color: darkgreen; /* Example: darker green on hover */
+  }
+  
+  .dialog-button-red {
+    /* Styles for the red button */
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dialog-button-red:hover {
+    background-color: darkred; /* Example: darker red on hover */
+  }
+  

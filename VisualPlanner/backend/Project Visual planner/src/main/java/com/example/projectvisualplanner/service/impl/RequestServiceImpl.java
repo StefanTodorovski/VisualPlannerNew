@@ -72,11 +72,21 @@ public class RequestServiceImpl implements RequestService {
                 .orElseThrow(() -> new RequestNotFound(id));
         request.setStatus(Request.RequestStatus.ACCEPTED);
 
-//        Availability availability = this.availabilityRepository.findById(availabilityId)
-//                        .orElseThrow(() -> new AvailabilityNotFoundException(availabilityId));
+        Task task = request.getTask();
 
-//        this.availabilityRepository.deleteById(availabilityId);
-        //this.availabilityRepository.delete(availability);
+        User userRequester = request.getUserRequester(); // Fetch the user who made the request
+
+        if (task != null && userRequester != null) {
+            double taskPoints = task.getPrice();
+            double userPoints = userRequester.getPoints();
+
+            // Add task points to user's points
+            userRequester.setPoints((int) (userPoints + taskPoints));
+
+            // Save the updated user entity
+            userRepository.save(userRequester);
+        }
+
         requestRepository.save(request);
     }
 
