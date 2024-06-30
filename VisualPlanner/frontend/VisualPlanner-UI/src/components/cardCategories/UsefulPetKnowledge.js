@@ -6,7 +6,7 @@ const UsefulPetKnowledge = ({ petData }) => {
 
   return (
     <div className="post-container">
-      <h2 className="section-title">Useful Knowledge</h2>
+      <h2 className="section-title">Корисни информации</h2>
 
       <div className="post-card-container">
         {petData.map((post, index) => (
@@ -25,7 +25,7 @@ const UsefulPetKnowledge = ({ petData }) => {
       </div>
 
       <Link to="/posts" className="button-view-more">
-        View More
+        Види повеќе
       </Link>
     </div>
   );

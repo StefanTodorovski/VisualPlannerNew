@@ -48,7 +48,7 @@ const EditProfileForm = ({ user }) => {
         picture: [],
       });
       window.location.reload();
-      toast.success("Information updated successfully.");
+      toast.success("Успешно променети информации.");
     } catch (error) {
       console.error("Update information error:", error.message);
     }
@@ -75,7 +75,7 @@ const EditProfileForm = ({ user }) => {
 
   return (
     <div className="edit-profile-form">
-      <h2>Edit Information</h2>
+      <h2>Промени информации</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <input
@@ -129,7 +129,7 @@ const EditProfileForm = ({ user }) => {
         </div>
         <div className="file-input-container">
           <label htmlFor="picture" className="upload-image-label">
-            Upload Image
+            Закачи слика
           </label>
           <input
             id="picture"
@@ -142,7 +142,7 @@ const EditProfileForm = ({ user }) => {
           />
         </div>
         <button type="submit" className="save-button">
-          Save
+          Зачувај
         </button>
       </form>
     </div>

@@ -28,9 +28,9 @@ const ContactPage = ({ user, refreshUser }) => {
     <div>
       <NavBar user={user} refreshUser={refreshUser} backgroundColor="#A8E1A0" />
       <div className="contact-container">
-        <h1 className="contact-title">Contact Us</h1>
+        <h1 className="contact-title">Контактирајте не!</h1>
         <h4 className="contact-message">
-          Any questions or remarks? Just write us a message!
+          Имате прашања? Напишете ни порака преку е-маил!
         </h4>
       </div>
       <div className="contact-form-section">
@@ -38,7 +38,7 @@ const ContactPage = ({ user, refreshUser }) => {
           <Row className="form-row">
             <Col className="first-col">
               <Row className="icon-row">
-                <h2>Contact Information</h2>
+                <h2>Информации за контакт</h2>
               </Row>
               <Row className="icon-row">
                 <Col xs="auto" className="icon-column">

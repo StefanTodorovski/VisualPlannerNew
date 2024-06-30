@@ -29,12 +29,12 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
   const handlePostComment = async () => {
     try {
       if (!comment) {
-        setError("Comment cannot be empty.");
+        setError("Коментарот не смее да биде празен.");
         return;
       }
 
       if (rating < 0 || rating > 5) {
-        setError("Rating must be between 0 and 5.");
+        setError("Рејтинот мора да е од 0 до 5.");
         return;
       }
 
@@ -46,15 +46,15 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
       };
 
       const result = await axiosInstance.post("/reviews/add", formData);
-      console.log("Comment posted successfully:", result.data);
+      console.log("Успешно поставен коментар:", result.data);
 
       setComment("");
       setRating(0);
       refreshService(postId);
       setError("");
-      toast.success("Comment posted successfully.");
+      toast.success("Успешно поставен коментар.");
     } catch (error) {
-      setError("Error posting comment. Please try again.");
+      setError("Грешка при креирање коментар. Обидете се повторно.");
       console.error("Error posting comment:", error.message);
     }
   };
@@ -68,12 +68,12 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
   const handleUpdateComment = async () => {
     try {
       if (!editingText) {
-        setError("Comment cannot be empty.");
+        setError("Коментарот не смее да биде празен.");
         return;
       }
 
       if (editingRating < 0 || editingRating > 5) {
-        setError("Rating must be between 0 and 5.");
+        setError("Рејтингот мора да е од 0 до 5.");
         return;
       }
 
@@ -94,9 +94,9 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
       setEditingRating(0);
       refreshService(postId);
       setError("");
-      toast.success("Comment updated successfully.");
+      toast.success("Успешно сменет коментар.");
     } catch (error) {
-      setError("Error updating comment. Please try again.");
+      setError("Грешка при менување на коментар.Обидете се повторно.");
       console.error("Error updating comment:", error.message);
     }
   };
@@ -108,7 +108,7 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
 
       refreshService(postId);
       setError("");
-      toast.success("Comment deleted successfully.");
+      toast.success("Успешно избришан коментар.");
     } catch (error) {
       setError("Error deleting comment. Please try again.");
       console.error("Error deleting comment:", error.message);
@@ -117,8 +117,8 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
 
   return (
     <div className="comments-section">
-      <h2>Please write here if you had any difficulties doing this</h2>
-      {comments.length === 0 && <h4>No comments available</h4>}
+      <h2>Напишете информации за задачата</h2>
+      {comments.length === 0 && <h4>Нема коментари</h4>}
       {comments.map((review) => (
         <div key={review.id} className="comment">
           <div className="comment-header">
@@ -146,13 +146,13 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
                   className="edit-comment-button"
                   onClick={() => handleEditComment(review)}
                 >
-                  Edit
+                  Промени
                 </button>
                 <button
                   className="delete-comment-button"
                   onClick={() => handleDeleteComment(review.id)}
                 >
-                  Delete
+                  Избриши
                 </button>
               </div>
             )}
@@ -165,7 +165,7 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
                 onChange={(e) => setEditingText(e.target.value)}
               />
               <div className="rating-input edit-rating-input">
-                <label htmlFor="edit-rating">Rate this post (0-5): </label>
+                <label htmlFor="edit-rating">Оцени ја задачата од 0 до 5: </label>
                 <input
                   type="number"
                   id="edit-rating"
@@ -180,13 +180,13 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
                 className="update-comment-button"
                 onClick={handleUpdateComment}
               >
-                Update
+                Промени
               </button>
               <button
                 className="cancel-edit-button"
                 onClick={() => setEditingComment(null)}
               >
-                Cancel
+                Откажи
               </button>
             </div>
           ) : (
@@ -197,13 +197,13 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
       {user && (
         <div>
           <textarea
-            placeholder="Write your comment here..."
+            placeholder="Напишете го вашиот коментар тука..."
             value={comment}
             onChange={handleCommentChange}
             className="comment-textarea"
           />
           <div className="rating-input">
-            <label htmlFor="rating">How hard was the task ? (0-5): </label>
+            <label htmlFor="rating">Колку беше тешка задачата? (0-5): </label>
             <input
               type="number"
               id="rating"
@@ -216,14 +216,14 @@ function CommentsSection({ reviews, user, postId, refreshService }) {
           </div>
           {error && <p className="error-message">{error}</p>}
           <button onClick={handlePostComment} className="post-comment-button">
-            Post Comment
+            Објави коментар.
           </button>
         </div>
       )}
       {!user && (
         <div className="text-bold">
-          Want to post a comment?{"  "}
-          <Link to="/login">Login first.</Link>
+          Сакаш да поставис коментар?{"  "}
+          <Link to="/login">Логирај се.</Link>
         </div>
       )}
       <br />

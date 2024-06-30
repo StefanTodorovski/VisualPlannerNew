@@ -18,7 +18,7 @@ const HomePage = ({ onClick, user, refreshUser }) => {
         <div className="custom-row">
           <div className="custom-col">
             <CardCategory
-              category="Plan tasks"
+              category="Планирање на задачи"
               imageUrl={require("../assets/Plantasks.png")}
               onClick={onClick}
               value="1"
@@ -26,7 +26,7 @@ const HomePage = ({ onClick, user, refreshUser }) => {
           </div>
           <div className="custom-col">
             <CardCategory
-              category="Time management"
+              category="Менаџирање на време"
               imageUrl={require("../assets/time.png")}
               onClick={onClick}
               value="2"
@@ -34,7 +34,7 @@ const HomePage = ({ onClick, user, refreshUser }) => {
           </div>
           <div className="custom-col">
             <CardCategory
-              category="Ideas for the day"
+              category="Идеја за денот"
               imageUrl={require("../assets/Lightbulb.png")}
               onClick={onClick}
               value="3"
@@ -46,7 +46,7 @@ const HomePage = ({ onClick, user, refreshUser }) => {
         <div className="custom-row">
           <div className="custom-col">
             <CardCategory
-              category="Schedule Tasks"
+              category="Распоред на задачи"
               imageUrl={require("../assets/plan.png")}
               onClick={onClick}
               value="4"
@@ -54,7 +54,7 @@ const HomePage = ({ onClick, user, refreshUser }) => {
           </div>
           <div className="custom-col">
             <CardCategory
-              category="Step by step"
+              category="Чекор по чекор"
               imageUrl={require("../assets/stepbystep.png")}
               onClick={onClick}
               value="5"
@@ -62,7 +62,7 @@ const HomePage = ({ onClick, user, refreshUser }) => {
           </div>
           <div className="custom-col">
             <CardCategory
-              category="Feeling of accomplishment"
+              category="Чувство на успех"
               imageUrl={require("../assets/accomplishment.png")}
               style={{ marginLeft: "3%" }}
               onClick={onClick}
@@ -73,7 +73,7 @@ const HomePage = ({ onClick, user, refreshUser }) => {
       </div>
       <div className="view-all-button-container">
         <Link to="/services" className="view-all-button">
-          View All
+          Види повеќе
         </Link>
       </div>{" "}
       <div className="post-container">

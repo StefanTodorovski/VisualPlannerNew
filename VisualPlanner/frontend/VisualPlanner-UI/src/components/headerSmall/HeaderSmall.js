@@ -64,17 +64,17 @@ const HeaderSmall = ({ user }) => {
       <ul className={open ? "nav-links-small active" : "nav-links-small"}>
         <li className="nav-item-small">
           <Link to="/" className="nav-link-small" onClick={closeMenu}>
-            Home
+            Главна страна
           </Link>
         </li>
         <li className="nav-item-small">
           <Link to="/services" className="nav-link-small" onClick={closeMenu}>
-            Services
+            Задачи
           </Link>
         </li>
         <li className="nav-item-small">
           <Link to="/contact" className="nav-link-small" onClick={closeMenu}>
-            Contact
+            Контакт
           </Link>
         </li>
         {user && (
@@ -90,7 +90,7 @@ const HeaderSmall = ({ user }) => {
               </Link>
             </li>
             <li className="logout-btn">
-              <button onClick={handleLogout}>Logout</button>
+              <button onClick={handleLogout}>Одлогирај се</button>
             </li>
           </React.Fragment>
         )}

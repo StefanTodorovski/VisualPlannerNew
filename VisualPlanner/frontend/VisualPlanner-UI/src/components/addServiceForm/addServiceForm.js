@@ -70,7 +70,7 @@ const AddServiceForm = ({
             const byteArray = new Uint8Array(this.response);
             resolve(Array.from(byteArray));
           } else {
-            reject(new Error("Failed to load image"));
+            reject(new Error("Грешка при вчитување на слика."));
           }
         };
         xhr.send();
@@ -96,7 +96,7 @@ const AddServiceForm = ({
     const dateObject = value.$d;
     const isInPast = isPast(dateObject);
     if (isInPast) {
-      setError("Selected date is in the past!");
+      setError("Датумот што го избравте е во минатото!");
     }
 
     const formattedDate = format(dateObject, "dd-MM-yyyy HH:mm:ss");
@@ -123,15 +123,15 @@ const AddServiceForm = ({
     try {
       if (postToEdit) {
         await axiosInstance.put(`/posts/${postToEdit.id}`, formData);
-        toast.success("Post updated successfully.");
+        toast.success("Успешно променета задача.");
       } else {
         await axiosInstance.post("/posts/add", formData);
-        toast.success("Post added successfully.");
+        toast.success("Успешно додадена задача.");
       }
       navigate("/profile");
       refreshUserPosts(userId);
     } catch (error) {
-      setError("Failed to add service. Please try again.");
+      setError("Грешка при додавање на задача. Обидете се повторно.");
       console.error("Error occurred:", error);
     }
   };

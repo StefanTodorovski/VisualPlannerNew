@@ -50,7 +50,7 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
       const response = await acceptRequest(requestId, availabilityId);
       fetchPostRequestsPoster(user.id);
       fetchPostRequestsRequester(user.id);
-      toast.success("You successfully accepted the request.");
+      toast.success("Успешно одобривте барање.");
     } catch (error) {
       console.error("Error accepting request:", error.message);
     }
@@ -63,7 +63,7 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
       fetchPostRequestsPoster(user.id);
       fetchPostRequestsRequester(user.id);
 
-      toast.success("You successfully declined the request.");
+      toast.success("Успешно одбивте барање.");
     } catch (error) {
       console.error("Error declining request:", error.message);
     }
@@ -85,7 +85,7 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
     try {
       await axiosInstance.delete(`/posts/${postId}`);
       refreshUserPosts(user.id);
-      toast.success("Post deleted successfully");
+      toast.success("Успешно избришана задача.");
     } catch (error) {
       console.error("Delete error:", error.message);
     }
@@ -99,9 +99,9 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
     return (
       <div className="profile-details-container">
         <div className="profile-header">
-          Want to view your profile?
+         Сакаш да си го видиш профилот?
           <Link to="/login" className="button">
-            Login first.
+            Логирај се.
           </Link>
         </div>
       </div>
@@ -118,7 +118,7 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
               className="button edit-information"
               onClick={toggleEditMode}
             >
-              &larr; Back to your profile page
+              &larr; Назад кон профилот
             </button>
           </div>
         ) : (
@@ -272,7 +272,7 @@ const ProfileDetailsForm = ({ user, userPosts, refreshUserPosts }) => {
             <tbody>
               {postRequestsRequester.length === 0 ? (
                 <tr>
-                  <td colSpan="4">No requests on other posts found.</td>
+                  <td colSpan="4">Немате барања на други задачи.</td>
                 </tr>
               ) : (
                 postRequestsRequester.map((request) => (

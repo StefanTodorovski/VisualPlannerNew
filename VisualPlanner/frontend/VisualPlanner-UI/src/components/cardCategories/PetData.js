@@ -1,57 +1,57 @@
 const petData = [
     {
         id: 1,
-        title: 'Visual Planners: Benefits for Kids and Kids with Difficulties',
-        content: `Visual planners are powerful tools that can help children, including those with learning difficulties, to organize their daily tasks and routines. In this post, we'll explore the numerous benefits of using visual planners for kids.\n\n
-    1. Enhanced Organization:\n
-    Visual planners provide a clear and structured way for children to see their daily schedule. This helps them understand what activities are planned and when they need to be completed. With visual cues, children can better manage their time and stay organized.\n\n
-    2. Reduced Anxiety:\n
-    Knowing what to expect throughout the day can significantly reduce anxiety in children, especially those with autism or ADHD. A visual planner offers a predictable routine, which can be comforting and reassuring for kids who thrive on consistency.\n\n
-    3. Improved Focus and Attention:\n
-    Visual planners help children focus on one task at a time. By breaking down the day into manageable segments, kids can concentrate on completing each task without feeling overwhelmed. This can be particularly beneficial for children with attention deficits.\n\n
-    4. Encourages Independence:\n
-    Using a visual planner empowers children to take charge of their own schedules. They learn to follow their daily routine without constant reminders from parents or caregivers, fostering a sense of independence and responsibility.\n\n
-    5. Visual Learning Support:\n
-    Many children are visual learners and benefit from seeing information presented in a graphic format. Visual planners use images, colors, and icons to represent tasks and activities, making it easier for children to understand and remember their schedules.\n\n
-    Conclusion\n\n
-    Visual planners are invaluable tools for helping children, including those with learning difficulties, to manage their daily routines. By enhancing organization, reducing anxiety, improving focus, encouraging independence, and supporting visual learning, these planners can significantly improve a child's ability to navigate their day successfully. Consider incorporating a visual planner into your child's daily routine to help them thrive and achieve their full potential.`,
+        title: 'Визуелни планери: придобивки за деца и деца со тешкотии',
+        content: `Визуелните планери се моќни алатки кои можат да им помогнат на децата, вклучувајќи ги и оние со тешкотии во учењето, да ги организираат своите дневни задачи и рутини. Во овој пост ќе истражиме многубројните придобивки од користењето визуелни планери за деца.\n\n
+    1. Подобрена Организација:\n
+    Визуелните планери обезбедуваат јасен и структуриран начин за децата да го видат својот дневен распоред. Ова им помага да разберат кои активности се планирани и кога треба да се завршат. Со визуелни знаци, децата можат подобро да го управуваат своето време и да останат организирани.\n\n
+    2. Намалена Анксиозност:\n
+    Знаењето што да очекуваат во текот на денот може значително да ја намали анксиозноста кај децата, особено кај оние со аутизам или ADHD. Визуелен планер нуди предвидлива рутина, што може да биде утешно и смирувачко за децата кои напредуваат на конзистентност.\n\n
+    3. Подобрена Фокусираност и Внимание:\n
+    Визуелните планери им помагаат на децата да се фокусираат на една задача во исто време. Со разбивање на денот на управливи сегменти, децата можат да се концентрираат на завршувањето на секоја задача без да се чувствуваат преплавено. Ова може да биде особено корисно за децата со дефицити на внимание.\n\n
+    4. Поттикнува Независност:\n
+    Користењето визуелен планер ги овластува децата да го преземат контролата над својот сопствен распоред. Тие учат да ја следат својата дневна рутина без постојани потсетници од родителите или негувателите, поттикнувајќи чувство на независност и одговорност.\n\n
+    5. Поддршка за Визуелно Учење:\n
+    Многу деца се визуелни ученици и имаат корист од гледање информации претставени во графички формат. Визуелните планери користат слики, бои и икони за да претстават задачи и активности, што го олеснува разбирањето и паметењето на нивниот распоред.\n\n
+    Заклучок\n\n
+    Визуелните планери се непроценливи алатки за помагање на децата, вклучувајќи ги и оние со тешкотии во учењето, да ги управуваат своите дневни рутини. Со подобрување на организацијата, намалување на анксиозноста, подобрување на фокусираноста, поттикнување на независноста и поддршка за визуелното учење, овие планери можат значително да ја подобрат способноста на детето да го навигира својот ден успешно. Размислете за вклучување на визуелен планер во дневната рутина на вашето дете за да им помогнете да напредуваат и да го достигнат својот целосен потенцијал.`,
         imageUrl: require('../../assets/pictureofkid.jpg')
     },
     {
         id: 2,
-        title: 'The Link Between Mental Health, Learning Ability, and Kids',
-        content: `Understanding the connection between mental health and learning ability is crucial for ensuring the well-being and academic success of children. In this post, we'll delve into the importance of mental health in relation to learning and its impact on children.\n\n
-    1. Mental Health and Learning:\n
-    Mental health plays a significant role in a child's ability to learn and thrive academically. Children who struggle with mental health issues such as anxiety, depression, or ADHD may find it challenging to focus, retain information, and perform well in school.\n\n
-    2. Impact on Academic Performance:\n
-    Poor mental health can negatively impact a child's academic performance. It can lead to absenteeism, difficulty concentrating, and lower grades. Addressing mental health concerns early on is essential for preventing academic setbacks and ensuring that children have the support they need to succeed.\n\n
-    3. Importance of Supportive Environments:\n
-    Creating a supportive and nurturing environment is key to promoting positive mental health and learning outcomes for children. Schools and communities play a crucial role in providing resources and support services to address mental health needs and create inclusive learning environments.\n\n
-    4. Early Intervention and Prevention:\n
-    Early intervention is vital for addressing mental health concerns and preventing long-term academic consequences. Schools should prioritize mental health education, provide access to counseling services, and implement strategies to promote emotional well-being among students.\n\n
-    5. Holistic Approach to Education:\n
-    Taking a holistic approach to education involves recognizing the interconnectedness of mental health, learning ability, and overall well-being. By prioritizing mental health alongside academic achievement, schools can help children develop the resilience and coping skills needed to navigate life's challenges successfully.\n\n
-    Conclusion\n\n
-    The link between mental health, learning ability, and kids is undeniable. By prioritizing mental health support and creating inclusive learning environments, we can empower children to thrive academically and emotionally. Investing in the mental health and well-being of our children is essential for building a brighter and more successful future.`,
-        imageUrl: require('../../assets/importancekid.jpg')
+        title: 'Врската помеѓу менталното здравје, способноста за учење и децата',
+        content: `Разбирањето на врската меѓу менталното здравје и способноста за учење е клучно за обезбедување на благосостојбата и академскиот успех на децата. Во овој пост ќе ја разгледаме важноста на менталното здравје во однос на учењето и неговото влијание врз децата.\n\n
+    1. Ментално Здравје и Учење:\n
+    Менталното здравје игра значајна улога во способноста на детето да учи и да напредува академски. Децата кои се соочуваат со ментални здравствени проблеми како анксиозност, депресија или ADHD можат да имаат потешкотии со фокусирањето, задржувањето на информации и добрите училишни резултати.\n\n
+    2. Влијание врз Академската Перформанса:\n
+    Лошото ментално здравје може негативно да влијае на академските резултати на детето. Може да доведе до отсутност, тешкотии со концентрирањето и пониски оценки. Решавањето на менталните здравствени проблеми рано е суштинско за спречување на академските проблеми и обезбедување на поддршка што им е потребна на децата за успех.\n\n
+    3. Важноста на Поддржувачките Средини:\n
+    Создавањето поддржувачка и негувателна средина е клучно за промовирање на позитивното ментално здравје и училишни резултати кај децата. Училиштата и заедниците играат клучна улога во обезбедувањето ресурси и поддржувачки услуги за решавање на менталните здравствени потреби и создавање инклузивни училишни средини.\n\n
+    4. Рана Интервенција и Превенција:\n
+    Раната интервенција е витална за решавање на менталните здравствени проблеми и спречување на долгорочните академски последици. Училиштата треба да го приоретизираат менталното здравје, да обезбедат пристап до советувалишта и да имплементираат стратегии за промовирање на емоционалната благосостојба меѓу учениците.\n\n
+    5. Холистички Пристап кон Образованието:\n
+    Преземањето холистички пристап кон образованието подразбира препознавање на меѓусебната поврзаност на менталното здравје, способноста за учење и општата благосостојба. Со приоретизирање на менталното здравје заедно со академските достигнувања, училиштата можат да им помогнат на децата да развијат отпорност и вештини за справување со предизвиците во животот успешно.\n\n
+    Заклучок\n\n
+    Врската меѓу менталното здравје, способноста за учење и децата е неспорна. Со приоретизирање на поддршката за менталното здравје и создавање инклузивни училишни средини, можеме да ги овозможиме децата да напредуваат академски и емоционално. Инвестирањето во менталното здравје и благосостојбата на нашите деца е суштинско за градење на посветла и поуспешна иднина.`,
+    imageUrl: require('../../assets/importancekid.jpg')
     },
     {
         id: 3,
-        title: 'The Importance of Scheduling Tasks and Time Management for Kids',
-        content: `Teaching children the importance of scheduling tasks, managing time effectively, and fulfilling obligations lays the foundation for success in both academic and personal endeavors. In this post, we'll explore the significance of these skills for kids and how they contribute to their overall development.\n\n
-    1. Developing Responsibility:\n
-    Learning to schedule tasks and manage time teaches children responsibility and accountability. By assigning specific tasks and deadlines, kids learn the importance of meeting their obligations and taking ownership of their actions.\n\n
-    2. Building Time Management Skills:\n
-    Effective time management is a valuable skill that children can carry into adulthood. By prioritizing tasks, allocating time efficiently, and avoiding procrastination, kids learn how to make the most of their time and accomplish their goals.\n\n
-    3. Fostering Independence:\n
-    Scheduling tasks empowers children to take control of their daily activities and become more independent. As they learn to plan their schedules and follow through with their commitments, kids gain confidence in their abilities and develop a sense of autonomy.\n\n
-    4. Promoting Academic Success:\n
-    Strong time management skills are essential for academic success. Children who can effectively manage their time are better equipped to study efficiently, complete assignments on time, and perform well in school. These skills also help reduce stress and anxiety related to academic pressures.\n\n
-    5. Instilling Lifelong Habits:\n
-    Teaching children to schedule tasks and manage their time sets them up for success in all aspects of life. These skills are invaluable in navigating school, extracurricular activities, work, and personal relationships. By instilling these habits early on, parents and educators can help children thrive in the future.\n\n
-    Conclusion\n\n
-    The importance of scheduling tasks and time management for kids cannot be overstated. By teaching these skills from a young age, parents and educators can empower children to become responsible, independent, and successful individuals. Investing in these foundational skills is key to helping children reach their full potential.`,
-        imageUrl: require('../../assets/timeimportance.jpg')
+        title: 'Важноста на распоредот на задачите и управувањето со времето за деца',
+        content: `Учението на децата за важноста од распоредување на задачите, ефикасно управување со времето и исполнување на обврските поставува темели за успех во академските и личните напори. Во овој пост ќе ја истражиме значајноста на овие вештини за децата и како тие придонесуваат за нивниот целокупен развој.\n\n
+    1. Развивање Одговорност:\n
+    Учението да распоредуваат задачи и да управуваат со времето ги учи децата на одговорност и отчетност. Со доделување на специфични задачи и рокови, децата учат за важноста од исполнување на обврските и преземање одговорност за своите постапки.\n\n
+    2. Изградба на Вештини за Управување со Времето:\n
+    Ефективното управување со времето е вредна вештина што децата можат да ја понесат во зрелоста. Со приоритизирање на задачите, ефикасно распределување на времето и избегнување на одложување, децата учат како најдобро да го искористат своето време и да ги остварат своите цели.\n\n
+    3. Поттикнување на Независност:\n
+    Распоредувањето на задачите ги овластува децата да ги контролираат своите дневни активности и да станат по независни. Како што учат да ги планираат своите распоред и да ги следат своите обврски, децата стекнуваат самодоверба во своите способности и развиваат чувство на автономија.\n\n
+    4. Промовирање на Академски Успех:\n
+    Силните вештини за управување со времето се суштински за академски успех. Децата кои ефикасно управуваат со своето време се подобро подготвени за ефикасно учење, навремено завршување на задачите и добри училишни резултати. Овие вештини исто така помагаат во намалување на стресот и анксиозноста поврзани со академските притисоци.\n\n
+    5. Воспоставување на Доживотни Навики:\n
+    Учението на децата да распоредуваат задачи и да управуваат со времето ги подготвува за успех во сите аспекти на животот. Овие вештини се непроценливи во навигација низ школо, воншколски активности, работа и лични односи. Со воспоставување на овие навики од рана возраст, родителите и воспитувачите можат да им помогнат на децата да напредуваат во иднината.\n\n
+    Заклучок\n\n
+    Важноста на распоредување на задачите и управување со времето за децата не може да се прецени. Со учење на овие вештини од млада возраст, родителите и воспитувачите можат да ги овластат децата да станат одговорни, независни и успешни индивидуи. Инвестирањето во овие основни вештини е клучно за помагање на децата да го достигнат својот целосен потенцијал.`,
+    imageUrl: require('../../assets/timeimportance.jpg')
     },
 ];
 

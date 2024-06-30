@@ -54,18 +54,18 @@ const LoginForm = ({ refreshUser }) => {
 
       if(viewModel.roleId === 0 ){
         navigate("/home-page-kid")
-        toast.success("Login successful.");
+        toast.success("Успешно најавување.");
 
       } else {
 
       navigate("/");
       window.location.reload();
-      toast.success("Login successful.");
+      toast.success("Успешно најавување.");
 
       }
       
     } catch (error) {
-      setError("Login failed. Invalid credentials.");
+      setError("Неуспешно најавување. Погрешни информации.");
       console.error("Login error:", error.message);
     }
   };
@@ -73,14 +73,14 @@ const LoginForm = ({ refreshUser }) => {
   return (
     <div className="login-form-container">
       <div className="login-form-card">
-        <h2>Login</h2>
+        <h2>Најави се</h2>
         <form onSubmit={handleLogin}>
           <div className="input-group">
             <input
               type="email"
               name="email"
               value={formData.email}
-              placeholder="Username"
+              placeholder="Е-маил"
               required
               onChange={handleInputChange}
             />
@@ -90,7 +90,7 @@ const LoginForm = ({ refreshUser }) => {
               type="password"
               name="password"
               value={formData.password}
-              placeholder="Password"
+              placeholder="Лозинка"
               required
               onChange={handleInputChange}
             />
@@ -98,10 +98,10 @@ const LoginForm = ({ refreshUser }) => {
           {error && <div className="error-message">{error}</div>}
           <div className="login-actions">
             <button type="submit" className="login-button">
-              LOGIN
+              Најави се
             </button>
             <Link to={"/register"} className="forgot-password-link">
-              New to Visual Planner? Register here.
+              Нов корисник? Регистрирај се тука.
             </Link>
           </div>
           <div className="divider-container">

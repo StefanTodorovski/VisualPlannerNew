@@ -21,7 +21,7 @@ const PostPage = ({ user }) => {
                 className="post-image"
               />
             ) : (
-              <p>Loading...</p>
+              <p>Се вчитува...</p>
             )}
             <div className="post-text-section">
               <h3 className="post-page-title">{post.title}</h3>

@@ -30,7 +30,7 @@ const RegistrationForm = () => {
     event.preventDefault();
 
     if (formData.password !== formData.repeatPassword) {
-      setError("Passwords do not match.");
+      setError("Погрешна лозинка.");
       return;
     }
 
@@ -47,22 +47,22 @@ const RegistrationForm = () => {
         repeatPassword: "",
       });
       navigate("/login");
-      toast.success("Registration successful. Please login.");
+      toast.success("Успешна регистрација. Најави се.");
     } catch (error) {
-      setError("Registration failed. Please try again.");
+      setError("Неуспешна регистрација. Пробај повторно.");
       console.error("Registration error:", error.message);
     }
   };
 
   return (
     <div>
-      <h2>Register</h2>
+      <h2>Регистрирај се</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="Име"
             value={formData.name}
             onChange={handleInputChange}
             required
@@ -72,7 +72,7 @@ const RegistrationForm = () => {
           <input
             type="text"
             name="surname"
-            placeholder="Surname"
+            placeholder="Презиме"
             value={formData.surname}
             onChange={handleInputChange}
             required
@@ -82,7 +82,7 @@ const RegistrationForm = () => {
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Е-маил"
             value={formData.email}
             onChange={handleInputChange}
             required
@@ -92,7 +92,7 @@ const RegistrationForm = () => {
           <input
             type="tel"
             name="phone"
-            placeholder="Phone number"
+            placeholder="Телефонски број"
             value={formData.phone}
             onChange={handleInputChange}
             required
@@ -102,7 +102,7 @@ const RegistrationForm = () => {
           <input
             type="text"
             name="location"
-            placeholder="Location"
+            placeholder="Локација"
             value={formData.location}
             onChange={handleInputChange}
             required
@@ -112,7 +112,7 @@ const RegistrationForm = () => {
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Лозинка"
             value={formData.password}
             onChange={handleInputChange}
             required
@@ -122,7 +122,7 @@ const RegistrationForm = () => {
           <input
             type="password"
             name="repeatPassword"
-            placeholder="Repeat password"
+            placeholder="Повтори лозинка"
             value={formData.repeatPassword}
             onChange={handleInputChange}
             required
@@ -131,11 +131,11 @@ const RegistrationForm = () => {
         {error && <div className="error-message">{error}</div>}
 
         <button type="submit" className="register-button">
-          REGISTER
+          Регистрирај се
         </button>
         <div className="login-actions">
           <Link to={"/login"} className="forgot-password-link">
-            Already registered? Login here.
+            Веќе регистрирани? Најавете се тука.
           </Link>
         </div>
       </form>

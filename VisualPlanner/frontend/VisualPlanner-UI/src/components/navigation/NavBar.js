@@ -71,17 +71,17 @@ const Navbar = ({ user, refreshUser, backgroundColor }) => {
       <ul className={open ? "nav-links active" : "nav-links"}>
         <li className="nav-item">
           <Link to="/" className="nav-link" onClick={closeMenu}>
-            Home
+            Главна страна
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/services" className="nav-link" onClick={closeMenu}>
-            My tasks
+            Мои задачи
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/contact" className="nav-link" onClick={closeMenu}>
-            Contact
+            Контакт
           </Link>
         </li>
         {user && (
@@ -97,7 +97,7 @@ const Navbar = ({ user, refreshUser, backgroundColor }) => {
               </Link>
             </li>
             <li className="logouAt-btn">
-              <button onClick={handleLogout}>Logout</button>
+              <button onClick={handleLogout}>Одлогирајте се</button>
             </li>
           </React.Fragment>
         )}

@@ -41,14 +41,14 @@ function ServiceDetailsPage({ user }) {
   }, [postId]);
 
   if (!service) {
-    return <div>Loading...</div>;
+    return <div>Се вчитува...</div>;
   }
 
   const handleApply = async () => {
     if (selectedAvailability) {
       try {
         const requestData = {
-          status: "PENDING",
+          status: "ИСЧЕКУВАЊЕ",
         };
 
         const response = await axiosInstance.post(
@@ -62,13 +62,13 @@ function ServiceDetailsPage({ user }) {
           }
         );
 
-        toast.success("Request successfully created!");
+        toast.success("Успешно креирано барање!");
       } catch (error) {
         console.error("Error creating request:", error.message);
-        alert("Error creating request. Please try again later.");
+        alert("Грешка при креирање на барање. Обидете се повторно.");
       }
     } else {
-      toast.error("Please select an availability");
+      toast.error("Изберете време.");
     }
   };
   const excludedProperties = [
@@ -82,12 +82,12 @@ function ServiceDetailsPage({ user }) {
     "picture",
   ];
   const propertyChanges = {
-    description: "Task description",
-    petSize: "Importance level",
-    price: "Points",
-    activityType: "Task type",
-    user: "This task is created by:",
-    petType: "Kid age",
+    description: "Опис на задача",
+    petSize: "Степен на важност",
+    price: "Поени",
+    activityType: "Тип на задача",
+    user: "Оваа задача е креирана од :",
+    petType: "Години на дете",
   };
 
   return (
@@ -103,7 +103,7 @@ function ServiceDetailsPage({ user }) {
                 height="150"
               />
             ) : (
-              <p>Loading...</p>
+              <p>Се вчитува...</p>
             )}
           </div>
           <div className="service-details-info">
@@ -130,12 +130,12 @@ function ServiceDetailsPage({ user }) {
             </div>
             <br />
             <div className="availabilities-section">
-              <h4>Check this if you have done this task in the provided time period:</h4>
+              <h4>Избери временски период во кој сакате да ја извршите задачата:</h4>
               <table className="availabilities-table">
                 <thead>
                   <tr>
-                    <th colSpan={2}>From</th>
-                    <th>To</th>
+                    <th colSpan={2}>Од</th>
+                    <th>До</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -160,7 +160,7 @@ function ServiceDetailsPage({ user }) {
             </div>
             <br />
             <button className="apply-button" onClick={handleApply}>
-              Done
+              Завршено
             </button>
           </div>
         </div>

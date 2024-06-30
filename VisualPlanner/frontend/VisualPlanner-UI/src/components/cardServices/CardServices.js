@@ -15,17 +15,17 @@ function CardService({ service }) {
         {service.picture ? (
           <img src={`data:image/png;base64,${service.picture}`} alt={service.serviceName} />
         ) : (
-          <p>Loading...</p>
+          <p>Се вчитува...</p>
         )}
       </Link>
       <div className="card-details">
         <h3>{service.activityTypeName}</h3>
         <p>
-          <label>Description :</label>
+          <label>Опис :</label>
          {service.description}
         </p>
-        <p>Points: {service.price}</p>
-        <p className="posted-by">Created by: {service.user} </p>
+        <p>Поени: {service.price}</p>
+        <p className="posted-by">Креирано од: {service.user} </p>
       </div>
     </div>
   );
@@ -73,12 +73,12 @@ function CardServices({
   return (
     <div className="App">
       <div className="filters">
-        <h3>My tasks:</h3>
+        <h3>Мои задачи:</h3>
         <p
           className={!activityTypeId ? "active" : ""}
           onClick={() => handleActivityTypeClick(null)}
         >
-          All
+          Сите
         </p>
         {activityTypes.map((activityType) => (
           <p
@@ -97,7 +97,7 @@ function CardServices({
               <CardService key={service.id} service={service} />
             ))
           ) : (
-            <h2 className="card-services-none">No current active tasks for this category</h2>
+            <h2 className="card-services-none">Нема активни задачи за оваа категорија.</h2>
           )}
         </div>
         <Pagination
