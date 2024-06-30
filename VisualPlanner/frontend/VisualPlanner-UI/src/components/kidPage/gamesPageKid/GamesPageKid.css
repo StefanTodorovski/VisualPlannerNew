@@ -1,6 +1,11 @@
 /* GamesPageKid.css */
 
-.games-container {
+.games-page {
+    padding: 20px;
+    position: relative; /* Ensure relative positioning for absolute child */
+  }
+  
+  .games-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,8 +17,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    width: 45%; /* Adjust as needed for spacing */
-    max-width: 300px; /* Limit width for smaller screens */
+    width: 45%;
+    max-width: 300px;
   }
   
   .game-image {
@@ -22,11 +27,29 @@
     border-radius: 8px;
   }
   
-  /* Media query for smaller screens */
-  @media screen and (max-width: 768px) {
-    .game-card {
-      width: 100%; /* Full width on smaller screens */
-      max-width: none; /* Remove max-width */
-    }
+  .back-button {
+    position: fixed; /* Fixed position for bottom-left corner */
+    bottom: 20px; /* Adjust distance from bottom */
+    left: 20px; /* Adjust distance from left */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%; /* Circular button */
+    text-decoration: none;
+    z-index: 999; /* Ensure button is on top of other content */
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-icon {
+    font-size: 24px; /* Adjust icon size */
+    margin: auto; /* Center icon inside button */
   }
   

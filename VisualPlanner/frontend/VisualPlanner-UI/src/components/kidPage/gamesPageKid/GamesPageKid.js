@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { MdArrowBack } from 'react-icons/md';
 import './GamesPageKid.css';
 
+// Import your GIFs here
 import basketball from "../../../assets/basketball.gif";
 import foot from "../../../assets/foot.gif";
 import motocross from "../../../assets/motocross.gif";
@@ -33,6 +36,9 @@ const GamesPageKid = () => {
           </div>
         ))}
       </div>
+      <Link to="/home-page-kid" className="back-button">
+        <MdArrowBack className="back-icon" />
+      </Link>
     </div>
   );
 };
